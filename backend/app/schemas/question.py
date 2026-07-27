@@ -10,7 +10,7 @@ class QuestionGenerate(BaseModel):
     exam_pattern_id: Optional[uuid.UUID] = None
     source_file_ids: list[uuid.UUID] = []
     language: str = "english"
-    question_count: int = Field(default=50, ge=1, le=200)
+    question_count: int = Field(default=50, ge=1, le=500)
     difficulty: str = "balanced"
     paper_set: str = "set_1"
     previous_year_ids: list[uuid.UUID] = []

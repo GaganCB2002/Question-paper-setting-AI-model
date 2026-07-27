@@ -496,6 +496,37 @@ Return ONLY this JSON array:
         content = f"{question.get('question_text', '')}|{question.get('option_a', '')}|{question.get('option_b', '')}|{question.get('option_c', '')}|{question.get('option_d', '')}|{question.get('correct_answer', '')}"
         return hashlib.sha256(content.encode()).hexdigest()
 
+    async def auto_resume_paused_tasks(self, user_id: uuid.UUID) -> dict:
+        result = await self.db.execute(
+            select(GenerationTask).where(
+                GenerationTask.user_id == user_id,
+                GenerationTask.status == "paused",
+                GenerationTask.is_deleted == False,
+            ).order_by(GenerationTask.created_at.desc())
+        )
+        paused_tasks = result.scalars().all()
+
+        quota_check = await self.token_service.check_quota(user_id, TOKENS_PER_QUESTION_ESTIMATE)
+        if not quota_check.get("can_generate", False):
+            return {
+                "resumed": 0,
+                "message": "Quota still exhausted. Cannot auto-resume.",
+                "paused_count": len(paused_tasks),
+            }
+
+        resumed = 0
+        for task in paused_tasks:
+            task.status = "approved"
+            task.paused_at = None
+            resumed += 1
+
+        await self.db.flush()
+        return {
+            "resumed": resumed,
+            "message": f"Auto-resumed {resumed} of {len(paused_tasks)} paused tasks.",
+            "paused_count": len(paused_tasks),
+        }
+
     def _default_phases(self, total_questions: int, questions_per_phase: int) -> list[dict]:
         num_phases = (total_questions + questions_per_phase - 1) // questions_per_phase
         phases = []

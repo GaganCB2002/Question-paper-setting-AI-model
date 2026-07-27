@@ -334,6 +334,8 @@ class QuestionService:
         return result.scalar_one_or_none() is not None
 
     async def _get_or_create_topic(self, topic_name: str, syllabus_id: Optional[uuid.UUID]) -> Optional[Topic]:
+        if syllabus_id is None:
+            return None
         result = await self.db.execute(
             select(Topic).where(
                 Topic.name == topic_name,
@@ -342,7 +344,7 @@ class QuestionService:
             ).limit(1)
         )
         topic = result.scalar_one_or_none()
-        if topic is None and syllabus_id:
+        if topic is None:
             topic = Topic(
                 name=topic_name,
                 syllabus_id=syllabus_id,

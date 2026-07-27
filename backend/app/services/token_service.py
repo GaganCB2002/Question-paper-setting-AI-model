@@ -163,7 +163,10 @@ class TokenService:
         for threshold in NOTIFICATION_THRESHOLDS:
             if daily_pct >= threshold > quota.last_notification_pct:
                 needs_notification = True
+                quota.last_notification_pct = threshold
                 break
+
+        await self.db.flush()
 
         return {
             "quota": {

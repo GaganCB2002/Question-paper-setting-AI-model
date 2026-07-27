@@ -28,7 +28,7 @@ from app.models.question import GeneratedPaper, GeneratedQuestion
 class SyllabusGenerateRequest(BaseModel):
     text: str = Field(..., min_length=10)
     exam_name: str = Field(default="General")
-    question_count: int = Field(default=10, ge=1, le=50)
+    question_count: int = Field(default=10, ge=1, le=500)
     language: str = Field(default="english")
     difficulty: str = Field(default="balanced")
 

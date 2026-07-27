@@ -1,14 +1,12 @@
-import { useState, useEffect, useRef } from 'react';
+import { useState, useEffect } from 'react';
 import { useNavigate } from 'react-router-dom';
-import { ArrowLeft, Loader2, Sparkles, CheckCircle, XCircle, AlertTriangle, Play, Pause, RefreshCw, Clock, FileText, ListChecks, Brain, ChevronRight, ChevronDown, Layers, ThumbsUp, ThumbsDown } from 'lucide-react';
+import { ArrowLeft, Loader2, Sparkles, CheckCircle, XCircle, Play, Pause, RefreshCw, Clock, ListChecks, Brain, ChevronRight, ChevronDown, Layers, ThumbsUp, ThumbsDown } from 'lucide-react';
 import { Button } from '../components/ui/button';
 import { Card, CardContent, CardHeader, CardTitle } from '../components/ui/card';
 import { Input } from '../components/ui/input';
 import { useToast } from '../hooks/use-toast';
 import { api } from '../lib/api';
 import { useAuthStore } from '../stores/authStore';
-
-const API_BASE = (import.meta as any).env?.VITE_API_URL || 'http://localhost:8000/api/v1';
 
 interface Phase {
   phase_number: number;
@@ -72,11 +70,21 @@ export default function TaskPlannerPage() {
   // Generation
   const [generating, setGenerating] = useState(false);
   const [genLog, setGenLog] = useState<SSEEvent[]>([]);
-  const eventSourceRef = useRef<EventSource | null>(null);
 
   useEffect(() => {
     loadTasks();
+    autoResumePaused();
   }, []);
+
+  const autoResumePaused = async () => {
+    try {
+      const res = await api.autoResumeTasks();
+      if (res.success && res.data?.resumed > 0) {
+        toast({ title: 'Tasks auto-resumed', description: res.data.message });
+        loadTasks();
+      }
+    } catch {}
+  };
 
   const loadTasks = async () => {
     setLoadingTasks(true);
@@ -137,46 +145,71 @@ export default function TaskPlannerPage() {
     }
   };
 
-  const handleStartTask = (taskId: string) => {
+  const handleStartTask = async (taskId: string) => {
     setActiveTaskId(taskId);
     setGenerating(true);
     setGenLog([]);
 
     const token = useAuthStore.getState().accessToken;
-    const url = `${API_BASE}${api.startTask(taskId)}`;
-    const es = new EventSource(url);
+    const url = api.startTaskUrl(taskId);
 
-    es.onmessage = (event) => {
-      try {
-        const data: SSEEvent = JSON.parse(event.data);
-        setGenLog(prev => [...prev, data]);
+    try {
+      const res = await fetch(url, {
+        method: 'POST',
+        headers: {
+          ...(token ? { Authorization: `Bearer ${token}` } : {}),
+        },
+      });
 
-        if (data.type === 'complete' || data.type === 'error' || data.type === 'quota_exceeded') {
-          es.close();
-          setGenerating(false);
-          loadTasks();
-          if (data.type === 'complete') {
-            toast({ title: 'Task complete', description: data.message });
-          } else if (data.type === 'quota_exceeded') {
-            toast({ title: 'Quota exceeded', description: data.message, variant: 'destructive' });
-          } else {
-            toast({ title: 'Error', description: data.message, variant: 'destructive' });
+      if (!res.ok) {
+        throw new Error(`HTTP ${res.status}`);
+      }
+
+      if (!res.body) throw new Error('No stream body');
+
+      const reader = res.body.getReader();
+      const decoder = new TextDecoder();
+      let buffer = '';
+
+      while (true) {
+        const { value, done } = await reader.read();
+        if (done) break;
+
+        buffer += decoder.decode(value, { stream: true });
+        const lines = buffer.split('\n');
+        buffer = lines.pop() || '';
+
+        for (const line of lines) {
+          if (line.startsWith('data: ')) {
+            try {
+              const data: SSEEvent = JSON.parse(line.slice(6));
+              setGenLog(prev => [...prev, data]);
+
+              if (data.type === 'complete' || data.type === 'error' || data.type === 'quota_exceeded') {
+                reader.cancel();
+                setGenerating(false);
+                loadTasks();
+                if (data.type === 'complete') {
+                  toast({ title: 'Task complete', description: data.message });
+                } else if (data.type === 'quota_exceeded') {
+                  toast({ title: 'Quota exceeded', description: data.message, variant: 'destructive' });
+                } else {
+                  toast({ title: 'Error', description: data.message, variant: 'destructive' });
+                }
+                return;
+              }
+            } catch {}
           }
         }
-      } catch {}
-    };
-
-    es.onerror = () => {
-      es.close();
+      }
+    } catch (err: any) {
       setGenerating(false);
-      toast({ title: 'Connection lost', description: 'Generation stream ended.', variant: 'destructive' });
-    };
-
-    eventSourceRef.current = es;
+      toast({ title: 'Connection lost', description: err.message || 'Generation stream ended.', variant: 'destructive' });
+    }
   };
 
-  const handleResumeTask = (taskId: string) => {
-    handleStartTask(taskId);
+  const handleResumeTask = async (taskId: string) => {
+    await handleStartTask(taskId);
   };
 
   const getStatusColor = (status: string) => {

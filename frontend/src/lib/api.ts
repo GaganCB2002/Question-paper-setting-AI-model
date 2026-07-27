@@ -188,7 +188,8 @@ export const api = {
     request('/tasks/create-plan', { method: 'POST', body: JSON.stringify(data) }),
   approveTaskPlan: (taskId: string, approve: boolean, reason?: string) =>
     request(`/tasks/${taskId}/approve`, { method: 'POST', body: JSON.stringify({ approve, reason: reason || '' }) }),
-  startTask: (taskId: string) => `/tasks/${taskId}/start`,
+  startTaskUrl: (taskId: string) => `${API_BASE}/tasks/${taskId}/start`,
+  autoResumeTasks: () => request('/tasks/auto-resume', { method: 'POST' }),
   getTaskStatus: (taskId: string) => request(`/tasks/${taskId}/status`),
   listTasks: (page = 1, pageSize = 20) => request(`/tasks/?page=${page}&page_size=${pageSize}`),
 

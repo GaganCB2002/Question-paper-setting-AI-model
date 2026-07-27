@@ -107,6 +107,19 @@ async def get_task_status(
         raise HTTPException(status_code=status.HTTP_404_NOT_FOUND, detail=str(e))
 
 
+@router.post("/auto-resume")
+async def auto_resume_tasks(
+    current_user: User = Depends(get_current_user),
+    db: AsyncSession = Depends(get_db),
+):
+    service = TaskService(db)
+    try:
+        result = await service.auto_resume_paused_tasks(current_user.id)
+        return {"success": True, "data": result}
+    except Exception as e:
+        raise HTTPException(status_code=status.HTTP_500_INTERNAL_SERVER_ERROR, detail=str(e))
+
+
 @router.get("/")
 async def list_tasks(
     page: int = Query(1, ge=1),

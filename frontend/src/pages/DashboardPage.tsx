@@ -563,7 +563,7 @@ export default function DashboardPage() {
                 <label className="text-xs text-muted-foreground">Questions:</label>
                 <select value={questionCount} onChange={e => setQuestionCount(Number(e.target.value))}
                   className="h-9 px-3 rounded-lg border bg-background text-sm">
-                  {[5, 10, 15, 20, 25, 30, 50].map(n => <option key={n} value={n}>{n}</option>)}
+                  {[5, 10, 15, 20, 25, 30, 50, 100, 150, 200, 300, 500].map(n => <option key={n} value={n}>{n}</option>)}
                 </select>
               </div>
               <div className="flex items-center gap-2">
