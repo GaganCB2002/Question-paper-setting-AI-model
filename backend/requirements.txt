@@ -1,0 +1,57 @@
+# FastAPI & Server
+fastapi==0.115.6
+uvicorn[standard]==0.34.0
+python-multipart==0.0.19
+httpx==0.28.1
+
+# Database
+sqlalchemy[asyncio]==2.0.36
+asyncpg==0.30.0
+alembic==1.14.1
+psycopg2-binary==2.9.10
+
+# Auth & Security
+passlib[bcrypt]==1.7.4
+python-jose[cryptography]==3.3.0
+python-jose==3.3.0
+bcrypt==4.2.1
+pydantic[email]==2.10.3
+pydantic-settings==2.7.0
+email-validator==2.2.0
+
+# AI & OCR
+google-generativeai==0.8.3
+pytesseract==0.3.13
+pdf2image==1.17.0
+Pillow==11.1.0
+opencv-python-headless==4.10.0.84
+numpy
+
+# File Processing
+python-docx==1.1.2
+python-pptx==0.6.23
+openpyxl==3.1.5
+PyMuPDF==1.25.2
+pdfplumber==0.11.4
+python-magic==0.4.27; sys_platform != 'win32'
+python-magic-bin; sys_platform == 'win32'
+filetype==1.2.0
+
+# Utility
+python-dotenv==1.0.1
+uuid7==0.1.0
+orjson==3.10.12
+celery[redis]==5.4.0
+redis==5.2.1
+langdetect==1.0.9
+deep-translator==1.11.4
+
+# PDF Reader Features
+reportlab==4.2.5
+pdfminer.six==20231228
+
+# Rate Limiting
+slowapi==0.1.9
+
+# Logging
+loguru==0.7.3

@@ -1,0 +1,1492 @@
+[DB] Using SQLite: D:\quuuuuuuuuuuuuuu\backend\data\kke.db
+2026-07-26 21:13:26,047 INFO sqlalchemy.engine.Engine BEGIN (implicit)
+2026-07-26 21:13:26,049 INFO sqlalchemy.engine.Engine PRAGMA main.table_info("roles")
+2026-07-26 21:13:26,051 INFO sqlalchemy.engine.Engine [raw sql] ()
+2026-07-26 21:13:26,053 INFO sqlalchemy.engine.Engine PRAGMA temp.table_info("roles")
+2026-07-26 21:13:26,054 INFO sqlalchemy.engine.Engine [raw sql] ()
+2026-07-26 21:13:26,056 INFO sqlalchemy.engine.Engine PRAGMA main.table_info("permissions")
+2026-07-26 21:13:26,057 INFO sqlalchemy.engine.Engine [raw sql] ()
+2026-07-26 21:13:26,059 INFO sqlalchemy.engine.Engine PRAGMA temp.table_info("permissions")
+2026-07-26 21:13:26,061 INFO sqlalchemy.engine.Engine [raw sql] ()
+2026-07-26 21:13:26,062 INFO sqlalchemy.engine.Engine PRAGMA main.table_info("role_permissions")
+2026-07-26 21:13:26,062 INFO sqlalchemy.engine.Engine [raw sql] ()
+2026-07-26 21:13:26,063 INFO sqlalchemy.engine.Engine PRAGMA temp.table_info("role_permissions")
+2026-07-26 21:13:26,063 INFO sqlalchemy.engine.Engine [raw sql] ()
+2026-07-26 21:13:26,064 INFO sqlalchemy.engine.Engine PRAGMA main.table_info("users")
+2026-07-26 21:13:26,064 INFO sqlalchemy.engine.Engine [raw sql] ()
+2026-07-26 21:13:26,065 INFO sqlalchemy.engine.Engine PRAGMA temp.table_info("users")
+2026-07-26 21:13:26,065 INFO sqlalchemy.engine.Engine [raw sql] ()
+2026-07-26 21:13:26,065 INFO sqlalchemy.engine.Engine PRAGMA main.table_info("uploaded_files")
+2026-07-26 21:13:26,065 INFO sqlalchemy.engine.Engine [raw sql] ()
+2026-07-26 21:13:26,066 INFO sqlalchemy.engine.Engine PRAGMA temp.table_info("uploaded_files")
+2026-07-26 21:13:26,066 INFO sqlalchemy.engine.Engine [raw sql] ()
+2026-07-26 21:13:26,067 INFO sqlalchemy.engine.Engine PRAGMA main.table_info("syllabi")
+2026-07-26 21:13:26,067 INFO sqlalchemy.engine.Engine [raw sql] ()
+2026-07-26 21:13:26,067 INFO sqlalchemy.engine.Engine PRAGMA temp.table_info("syllabi")
+2026-07-26 21:13:26,068 INFO sqlalchemy.engine.Engine [raw sql] ()
+2026-07-26 21:13:26,068 INFO sqlalchemy.engine.Engine PRAGMA main.table_info("topics")
+2026-07-26 21:13:26,068 INFO sqlalchemy.engine.Engine [raw sql] ()
+2026-07-26 21:13:26,069 INFO sqlalchemy.engine.Engine PRAGMA temp.table_info("topics")
+2026-07-26 21:13:26,069 INFO sqlalchemy.engine.Engine [raw sql] ()
+2026-07-26 21:13:26,070 INFO sqlalchemy.engine.Engine PRAGMA main.table_info("sub_topics")
+2026-07-26 21:13:26,070 INFO sqlalchemy.engine.Engine [raw sql] ()
+2026-07-26 21:13:26,070 INFO sqlalchemy.engine.Engine PRAGMA temp.table_info("sub_topics")
+2026-07-26 21:13:26,071 INFO sqlalchemy.engine.Engine [raw sql] ()
+2026-07-26 21:13:26,071 INFO sqlalchemy.engine.Engine PRAGMA main.table_info("exam_patterns")
+2026-07-26 21:13:26,071 INFO sqlalchemy.engine.Engine [raw sql] ()
+2026-07-26 21:13:26,072 INFO sqlalchemy.engine.Engine PRAGMA temp.table_info("exam_patterns")
+2026-07-26 21:13:26,072 INFO sqlalchemy.engine.Engine [raw sql] ()
+2026-07-26 21:13:26,073 INFO sqlalchemy.engine.Engine PRAGMA main.table_info("previous_year_questions")
+2026-07-26 21:13:26,073 INFO sqlalchemy.engine.Engine [raw sql] ()
+2026-07-26 21:13:26,073 INFO sqlalchemy.engine.Engine PRAGMA temp.table_info("previous_year_questions")
+2026-07-26 21:13:26,073 INFO sqlalchemy.engine.Engine [raw sql] ()
+2026-07-26 21:13:26,074 INFO sqlalchemy.engine.Engine PRAGMA main.table_info("question_bank")
+2026-07-26 21:13:26,074 INFO sqlalchemy.engine.Engine [raw sql] ()
+2026-07-26 21:13:26,075 INFO sqlalchemy.engine.Engine PRAGMA temp.table_info("question_bank")
+2026-07-26 21:13:26,075 INFO sqlalchemy.engine.Engine [raw sql] ()
+2026-07-26 21:13:26,076 INFO sqlalchemy.engine.Engine PRAGMA main.table_info("generated_papers")
+2026-07-26 21:13:26,076 INFO sqlalchemy.engine.Engine [raw sql] ()
+2026-07-26 21:13:26,077 INFO sqlalchemy.engine.Engine PRAGMA temp.table_info("generated_papers")
+2026-07-26 21:13:26,077 INFO sqlalchemy.engine.Engine [raw sql] ()
+2026-07-26 21:13:26,078 INFO sqlalchemy.engine.Engine PRAGMA main.table_info("generated_questions")
+2026-07-26 21:13:26,078 INFO sqlalchemy.engine.Engine [raw sql] ()
+2026-07-26 21:13:26,079 INFO sqlalchemy.engine.Engine PRAGMA temp.table_info("generated_questions")
+2026-07-26 21:13:26,079 INFO sqlalchemy.engine.Engine [raw sql] ()
+2026-07-26 21:13:26,080 INFO sqlalchemy.engine.Engine PRAGMA main.table_info("answer_keys")
+2026-07-26 21:13:26,080 INFO sqlalchemy.engine.Engine [raw sql] ()
+2026-07-26 21:13:26,081 INFO sqlalchemy.engine.Engine PRAGMA temp.table_info("answer_keys")
+2026-07-26 21:13:26,081 INFO sqlalchemy.engine.Engine [raw sql] ()
+2026-07-26 21:13:26,081 INFO sqlalchemy.engine.Engine PRAGMA main.table_info("explanations")
+2026-07-26 21:13:26,082 INFO sqlalchemy.engine.Engine [raw sql] ()
+2026-07-26 21:13:26,082 INFO sqlalchemy.engine.Engine PRAGMA temp.table_info("explanations")
+2026-07-26 21:13:26,082 INFO sqlalchemy.engine.Engine [raw sql] ()
+2026-07-26 21:13:26,083 INFO sqlalchemy.engine.Engine PRAGMA main.table_info("current_affairs")
+2026-07-26 21:13:26,083 INFO sqlalchemy.engine.Engine [raw sql] ()
+2026-07-26 21:13:26,084 INFO sqlalchemy.engine.Engine PRAGMA temp.table_info("current_affairs")
+2026-07-26 21:13:26,084 INFO sqlalchemy.engine.Engine [raw sql] ()
+2026-07-26 21:13:26,085 INFO sqlalchemy.engine.Engine PRAGMA main.table_info("government_schemes")
+2026-07-26 21:13:26,085 INFO sqlalchemy.engine.Engine [raw sql] ()
+2026-07-26 21:13:26,085 INFO sqlalchemy.engine.Engine PRAGMA temp.table_info("government_schemes")
+2026-07-26 21:13:26,086 INFO sqlalchemy.engine.Engine [raw sql] ()
+2026-07-26 21:13:26,086 INFO sqlalchemy.engine.Engine PRAGMA main.table_info("ocr_data")
+2026-07-26 21:13:26,086 INFO sqlalchemy.engine.Engine [raw sql] ()
+2026-07-26 21:13:26,087 INFO sqlalchemy.engine.Engine PRAGMA temp.table_info("ocr_data")
+2026-07-26 21:13:26,087 INFO sqlalchemy.engine.Engine [raw sql] ()
+2026-07-26 21:13:26,088 INFO sqlalchemy.engine.Engine PRAGMA main.table_info("images")
+2026-07-26 21:13:26,088 INFO sqlalchemy.engine.Engine [raw sql] ()
+2026-07-26 21:13:26,088 INFO sqlalchemy.engine.Engine PRAGMA temp.table_info("images")
+2026-07-26 21:13:26,089 INFO sqlalchemy.engine.Engine [raw sql] ()
+2026-07-26 21:13:26,089 INFO sqlalchemy.engine.Engine PRAGMA main.table_info("ai_jobs")
+2026-07-26 21:13:26,089 INFO sqlalchemy.engine.Engine [raw sql] ()
+2026-07-26 21:13:26,089 INFO sqlalchemy.engine.Engine PRAGMA temp.table_info("ai_jobs")
+2026-07-26 21:13:26,090 INFO sqlalchemy.engine.Engine [raw sql] ()
+2026-07-26 21:13:26,090 INFO sqlalchemy.engine.Engine PRAGMA main.table_info("prompt_templates")
+2026-07-26 21:13:26,090 INFO sqlalchemy.engine.Engine [raw sql] ()
+2026-07-26 21:13:26,091 INFO sqlalchemy.engine.Engine PRAGMA temp.table_info("prompt_templates")
+2026-07-26 21:13:26,091 INFO sqlalchemy.engine.Engine [raw sql] ()
+2026-07-26 21:13:26,091 INFO sqlalchemy.engine.Engine PRAGMA main.table_info("audit_logs")
+2026-07-26 21:13:26,091 INFO sqlalchemy.engine.Engine [raw sql] ()
+2026-07-26 21:13:26,092 INFO sqlalchemy.engine.Engine PRAGMA temp.table_info("audit_logs")
+2026-07-26 21:13:26,092 INFO sqlalchemy.engine.Engine [raw sql] ()
+2026-07-26 21:13:26,092 INFO sqlalchemy.engine.Engine PRAGMA main.table_info("activity_logs")
+2026-07-26 21:13:26,092 INFO sqlalchemy.engine.Engine [raw sql] ()
+2026-07-26 21:13:26,093 INFO sqlalchemy.engine.Engine PRAGMA temp.table_info("activity_logs")
+2026-07-26 21:13:26,093 INFO sqlalchemy.engine.Engine [raw sql] ()
+2026-07-26 21:13:26,093 INFO sqlalchemy.engine.Engine PRAGMA main.table_info("settings")
+2026-07-26 21:13:26,094 INFO sqlalchemy.engine.Engine [raw sql] ()
+2026-07-26 21:13:26,094 INFO sqlalchemy.engine.Engine PRAGMA temp.table_info("settings")
+2026-07-26 21:13:26,094 INFO sqlalchemy.engine.Engine [raw sql] ()
+2026-07-26 21:13:26,094 INFO sqlalchemy.engine.Engine PRAGMA main.table_info("pdf_notes")
+2026-07-26 21:13:26,095 INFO sqlalchemy.engine.Engine [raw sql] ()
+2026-07-26 21:13:26,095 INFO sqlalchemy.engine.Engine PRAGMA temp.table_info("pdf_notes")
+2026-07-26 21:13:26,095 INFO sqlalchemy.engine.Engine [raw sql] ()
+2026-07-26 21:13:26,095 INFO sqlalchemy.engine.Engine PRAGMA main.table_info("pdf_bookmarks")
+2026-07-26 21:13:26,095 INFO sqlalchemy.engine.Engine [raw sql] ()
+2026-07-26 21:13:26,096 INFO sqlalchemy.engine.Engine PRAGMA temp.table_info("pdf_bookmarks")
+2026-07-26 21:13:26,096 INFO sqlalchemy.engine.Engine [raw sql] ()
+2026-07-26 21:13:26,096 INFO sqlalchemy.engine.Engine PRAGMA main.table_info("pdf_annotations")
+2026-07-26 21:13:26,097 INFO sqlalchemy.engine.Engine [raw sql] ()
+2026-07-26 21:13:26,097 INFO sqlalchemy.engine.Engine PRAGMA temp.table_info("pdf_annotations")
+2026-07-26 21:13:26,097 INFO sqlalchemy.engine.Engine [raw sql] ()
+2026-07-26 21:13:26,098 INFO sqlalchemy.engine.Engine 
+CREATE TABLE roles (
+	name VARCHAR(100) NOT NULL, 
+	description TEXT, 
+	is_system_role BOOLEAN NOT NULL, 
+	id UUID NOT NULL, 
+	created_at DATETIME DEFAULT (CURRENT_TIMESTAMP) NOT NULL, 
+	updated_at DATETIME DEFAULT (CURRENT_TIMESTAMP) NOT NULL, 
+	created_by VARCHAR(255), 
+	updated_by VARCHAR(255), 
+	status VARCHAR(50) NOT NULL, 
+	version INTEGER NOT NULL, 
+	is_deleted BOOLEAN NOT NULL, 
+	deleted_at DATETIME, 
+	deleted_by VARCHAR(255), 
+	notes TEXT, 
+	PRIMARY KEY (id)
+)
+
+
+2026-07-26 21:13:26,098 INFO sqlalchemy.engine.Engine [no key 0.00016s] ()
+2026-07-26 21:13:26,107 INFO sqlalchemy.engine.Engine CREATE UNIQUE INDEX ix_roles_name ON roles (name)
+2026-07-26 21:13:26,107 INFO sqlalchemy.engine.Engine [no key 0.00021s] ()
+2026-07-26 21:13:26,112 INFO sqlalchemy.engine.Engine CREATE INDEX ix_roles_created_by ON roles (created_by)
+2026-07-26 21:13:26,113 INFO sqlalchemy.engine.Engine [no key 0.00019s] ()
+2026-07-26 21:13:26,118 INFO sqlalchemy.engine.Engine CREATE INDEX ix_roles_id ON roles (id)
+2026-07-26 21:13:26,118 INFO sqlalchemy.engine.Engine [no key 0.00029s] ()
+2026-07-26 21:13:26,124 INFO sqlalchemy.engine.Engine CREATE INDEX ix_roles_is_deleted ON roles (is_deleted)
+2026-07-26 21:13:26,124 INFO sqlalchemy.engine.Engine [no key 0.00017s] ()
+2026-07-26 21:13:26,129 INFO sqlalchemy.engine.Engine CREATE INDEX ix_roles_status ON roles (status)
+2026-07-26 21:13:26,130 INFO sqlalchemy.engine.Engine [no key 0.00019s] ()
+2026-07-26 21:13:26,135 INFO sqlalchemy.engine.Engine CREATE INDEX ix_roles_created_at ON roles (created_at)
+2026-07-26 21:13:26,136 INFO sqlalchemy.engine.Engine [no key 0.00082s] ()
+2026-07-26 21:13:26,142 INFO sqlalchemy.engine.Engine 
+CREATE TABLE permissions (
+	name VARCHAR(150) NOT NULL, 
+	code VARCHAR(150) NOT NULL, 
+	description TEXT, 
+	module VARCHAR(100) NOT NULL, 
+	id UUID NOT NULL, 
+	created_at DATETIME DEFAULT (CURRENT_TIMESTAMP) NOT NULL, 
+	updated_at DATETIME DEFAULT (CURRENT_TIMESTAMP) NOT NULL, 
+	created_by VARCHAR(255), 
+	updated_by VARCHAR(255), 
+	status VARCHAR(50) NOT NULL, 
+	version INTEGER NOT NULL, 
+	is_deleted BOOLEAN NOT NULL, 
+	deleted_at DATETIME, 
+	deleted_by VARCHAR(255), 
+	notes TEXT, 
+	PRIMARY KEY (id)
+)
+
+
+2026-07-26 21:13:26,143 INFO sqlalchemy.engine.Engine [no key 0.00033s] ()
+2026-07-26 21:13:26,148 INFO sqlalchemy.engine.Engine CREATE INDEX ix_permissions_created_by ON permissions (created_by)
+2026-07-26 21:13:26,148 INFO sqlalchemy.engine.Engine [no key 0.00029s] ()
+2026-07-26 21:13:26,153 INFO sqlalchemy.engine.Engine CREATE INDEX ix_permissions_created_at ON permissions (created_at)
+2026-07-26 21:13:26,153 INFO sqlalchemy.engine.Engine [no key 0.00020s] ()
+2026-07-26 21:13:26,159 INFO sqlalchemy.engine.Engine CREATE INDEX ix_permissions_is_deleted ON permissions (is_deleted)
+2026-07-26 21:13:26,159 INFO sqlalchemy.engine.Engine [no key 0.00023s] ()
+2026-07-26 21:13:26,165 INFO sqlalchemy.engine.Engine CREATE INDEX ix_permissions_status ON permissions (status)
+2026-07-26 21:13:26,165 INFO sqlalchemy.engine.Engine [no key 0.00025s] ()
+2026-07-26 21:13:26,171 INFO sqlalchemy.engine.Engine CREATE INDEX ix_permissions_id ON permissions (id)
+2026-07-26 21:13:26,172 INFO sqlalchemy.engine.Engine [no key 0.00026s] ()
+2026-07-26 21:13:26,177 INFO sqlalchemy.engine.Engine CREATE INDEX ix_permissions_module ON permissions (module)
+2026-07-26 21:13:26,177 INFO sqlalchemy.engine.Engine [no key 0.00023s] ()
+2026-07-26 21:13:26,183 INFO sqlalchemy.engine.Engine CREATE UNIQUE INDEX ix_permissions_name ON permissions (name)
+2026-07-26 21:13:26,183 INFO sqlalchemy.engine.Engine [no key 0.00017s] ()
+2026-07-26 21:13:26,189 INFO sqlalchemy.engine.Engine CREATE UNIQUE INDEX ix_permissions_code ON permissions (code)
+2026-07-26 21:13:26,190 INFO sqlalchemy.engine.Engine [no key 0.00025s] ()
+2026-07-26 21:13:26,196 INFO sqlalchemy.engine.Engine 
+CREATE TABLE government_schemes (
+	name VARCHAR(500) NOT NULL, 
+	short_name VARCHAR(100), 
+	scheme_type VARCHAR(100), 
+	description TEXT, 
+	objective TEXT, 
+	benefits TEXT, 
+	eligibility TEXT, 
+	application_process TEXT, 
+	implementing_ministry VARCHAR(300), 
+	implementing_department VARCHAR(300), 
+	state VARCHAR(100), 
+	is_karnataka_scheme BOOLEAN NOT NULL, 
+	is_central_scheme BOOLEAN NOT NULL, 
+	launch_date DATE, 
+	launch_year INTEGER, 
+	budget_allocation VARCHAR(100), 
+	official_website VARCHAR(500), 
+	official_notification VARCHAR(500), 
+	source VARCHAR(500), 
+	is_verified BOOLEAN NOT NULL, 
+	verification_source VARCHAR(500), 
+	tags VARCHAR(500), 
+	language VARCHAR(50), 
+	key_features_json TEXT, 
+	statistics_json TEXT, 
+	id UUID NOT NULL, 
+	created_at DATETIME DEFAULT (CURRENT_TIMESTAMP) NOT NULL, 
+	updated_at DATETIME DEFAULT (CURRENT_TIMESTAMP) NOT NULL, 
+	created_by VARCHAR(255), 
+	updated_by VARCHAR(255), 
+	status VARCHAR(50) NOT NULL, 
+	version INTEGER NOT NULL, 
+	is_deleted BOOLEAN NOT NULL, 
+	deleted_at DATETIME, 
+	deleted_by VARCHAR(255), 
+	notes TEXT, 
+	PRIMARY KEY (id)
+)
+
+
+2026-07-26 21:13:26,197 INFO sqlalchemy.engine.Engine [no key 0.00033s] ()
+2026-07-26 21:13:26,203 INFO sqlalchemy.engine.Engine CREATE INDEX ix_government_schemes_short_name ON government_schemes (short_name)
+2026-07-26 21:13:26,204 INFO sqlalchemy.engine.Engine [no key 0.00030s] ()
+2026-07-26 21:13:26,209 INFO sqlalchemy.engine.Engine CREATE INDEX ix_government_schemes_status ON government_schemes (status)
+2026-07-26 21:13:26,209 INFO sqlalchemy.engine.Engine [no key 0.00022s] ()
+2026-07-26 21:13:26,216 INFO sqlalchemy.engine.Engine CREATE INDEX ix_government_schemes_scheme_type ON government_schemes (scheme_type)
+2026-07-26 21:13:26,216 INFO sqlalchemy.engine.Engine [no key 0.00036s] ()
+2026-07-26 21:13:26,222 INFO sqlalchemy.engine.Engine CREATE INDEX ix_government_schemes_id ON government_schemes (id)
+2026-07-26 21:13:26,222 INFO sqlalchemy.engine.Engine [no key 0.00023s] ()
+2026-07-26 21:13:26,229 INFO sqlalchemy.engine.Engine CREATE INDEX ix_government_schemes_launch_year ON government_schemes (launch_year)
+2026-07-26 21:13:26,229 INFO sqlalchemy.engine.Engine [no key 0.00037s] ()
+2026-07-26 21:13:26,236 INFO sqlalchemy.engine.Engine CREATE INDEX ix_government_schemes_name ON government_schemes (name)
+2026-07-26 21:13:26,236 INFO sqlalchemy.engine.Engine [no key 0.00028s] ()
+2026-07-26 21:13:26,243 INFO sqlalchemy.engine.Engine CREATE INDEX ix_government_schemes_created_by ON government_schemes (created_by)
+2026-07-26 21:13:26,243 INFO sqlalchemy.engine.Engine [no key 0.00021s] ()
+2026-07-26 21:13:26,249 INFO sqlalchemy.engine.Engine CREATE INDEX ix_government_schemes_state ON government_schemes (state)
+2026-07-26 21:13:26,249 INFO sqlalchemy.engine.Engine [no key 0.00028s] ()
+2026-07-26 21:13:26,256 INFO sqlalchemy.engine.Engine CREATE INDEX ix_government_schemes_is_deleted ON government_schemes (is_deleted)
+2026-07-26 21:13:26,256 INFO sqlalchemy.engine.Engine [no key 0.00032s] ()
+2026-07-26 21:13:26,263 INFO sqlalchemy.engine.Engine CREATE INDEX ix_government_schemes_created_at ON government_schemes (created_at)
+2026-07-26 21:13:26,263 INFO sqlalchemy.engine.Engine [no key 0.00038s] ()
+2026-07-26 21:13:26,269 INFO sqlalchemy.engine.Engine 
+CREATE TABLE prompt_templates (
+	name VARCHAR(200) NOT NULL, 
+	code VARCHAR(200) NOT NULL, 
+	description TEXT, 
+	category VARCHAR(100) NOT NULL, 
+	system_prompt TEXT NOT NULL, 
+	user_prompt_template TEXT NOT NULL, 
+	variables_json TEXT, 
+	parameters_json TEXT, 
+	model VARCHAR(100), 
+	temperature FLOAT, 
+	max_output_tokens INTEGER, 
+	top_p FLOAT, 
+	top_k INTEGER, 
+	is_active BOOLEAN NOT NULL, 
+	version INTEGER NOT NULL, 
+	language VARCHAR(50), 
+	usage_count INTEGER, 
+	success_rate FLOAT, 
+	average_rating FLOAT, 
+	id UUID NOT NULL, 
+	created_at DATETIME DEFAULT (CURRENT_TIMESTAMP) NOT NULL, 
+	updated_at DATETIME DEFAULT (CURRENT_TIMESTAMP) NOT NULL, 
+	created_by VARCHAR(255), 
+	updated_by VARCHAR(255), 
+	status VARCHAR(50) NOT NULL, 
+	is_deleted BOOLEAN NOT NULL, 
+	deleted_at DATETIME, 
+	deleted_by VARCHAR(255), 
+	notes TEXT, 
+	PRIMARY KEY (id)
+)
+
+
+2026-07-26 21:13:26,269 INFO sqlalchemy.engine.Engine [no key 0.00043s] ()
+2026-07-26 21:13:26,275 INFO sqlalchemy.engine.Engine CREATE UNIQUE INDEX ix_prompt_templates_name ON prompt_templates (name)
+2026-07-26 21:13:26,275 INFO sqlalchemy.engine.Engine [no key 0.00035s] ()
+2026-07-26 21:13:26,282 INFO sqlalchemy.engine.Engine CREATE INDEX ix_prompt_templates_is_deleted ON prompt_templates (is_deleted)
+2026-07-26 21:13:26,282 INFO sqlalchemy.engine.Engine [no key 0.00060s] ()
+2026-07-26 21:13:26,287 INFO sqlalchemy.engine.Engine CREATE INDEX ix_prompt_templates_created_at ON prompt_templates (created_at)
+2026-07-26 21:13:26,288 INFO sqlalchemy.engine.Engine [no key 0.00030s] ()
+2026-07-26 21:13:26,294 INFO sqlalchemy.engine.Engine CREATE INDEX ix_prompt_templates_status ON prompt_templates (status)
+2026-07-26 21:13:26,294 INFO sqlalchemy.engine.Engine [no key 0.00028s] ()
+2026-07-26 21:13:26,299 INFO sqlalchemy.engine.Engine CREATE INDEX ix_prompt_templates_id ON prompt_templates (id)
+2026-07-26 21:13:26,299 INFO sqlalchemy.engine.Engine [no key 0.00023s] ()
+2026-07-26 21:13:26,306 INFO sqlalchemy.engine.Engine CREATE UNIQUE INDEX ix_prompt_templates_code ON prompt_templates (code)
+2026-07-26 21:13:26,306 INFO sqlalchemy.engine.Engine [no key 0.00030s] ()
+2026-07-26 21:13:26,312 INFO sqlalchemy.engine.Engine CREATE INDEX ix_prompt_templates_category ON prompt_templates (category)
+2026-07-26 21:13:26,313 INFO sqlalchemy.engine.Engine [no key 0.00056s] ()
+2026-07-26 21:13:26,319 INFO sqlalchemy.engine.Engine CREATE INDEX ix_prompt_templates_created_by ON prompt_templates (created_by)
+2026-07-26 21:13:26,320 INFO sqlalchemy.engine.Engine [no key 0.00028s] ()
+2026-07-26 21:13:26,325 INFO sqlalchemy.engine.Engine 
+CREATE TABLE settings (
+	"key" VARCHAR(255) NOT NULL, 
+	value TEXT, 
+	value_type VARCHAR(50) NOT NULL, 
+	"group" VARCHAR(100), 
+	description VARCHAR(500), 
+	is_encrypted BOOLEAN NOT NULL, 
+	is_public BOOLEAN NOT NULL, 
+	is_system BOOLEAN NOT NULL, 
+	validation_rules TEXT, 
+	options_json TEXT, 
+	id UUID NOT NULL, 
+	created_at DATETIME DEFAULT (CURRENT_TIMESTAMP) NOT NULL, 
+	updated_at DATETIME DEFAULT (CURRENT_TIMESTAMP) NOT NULL, 
+	created_by VARCHAR(255), 
+	updated_by VARCHAR(255), 
+	status VARCHAR(50) NOT NULL, 
+	version INTEGER NOT NULL, 
+	is_deleted BOOLEAN NOT NULL, 
+	deleted_at DATETIME, 
+	deleted_by VARCHAR(255), 
+	notes TEXT, 
+	PRIMARY KEY (id)
+)
+
+
+2026-07-26 21:13:26,326 INFO sqlalchemy.engine.Engine [no key 0.00031s] ()
+2026-07-26 21:13:26,332 INFO sqlalchemy.engine.Engine CREATE INDEX ix_settings_id ON settings (id)
+2026-07-26 21:13:26,332 INFO sqlalchemy.engine.Engine [no key 0.00058s] ()
+2026-07-26 21:13:26,338 INFO sqlalchemy.engine.Engine CREATE UNIQUE INDEX ix_settings_key ON settings ("key")
+2026-07-26 21:13:26,339 INFO sqlalchemy.engine.Engine [no key 0.00031s] ()
+2026-07-26 21:13:26,344 INFO sqlalchemy.engine.Engine CREATE INDEX ix_settings_created_by ON settings (created_by)
+2026-07-26 21:13:26,344 INFO sqlalchemy.engine.Engine [no key 0.00020s] ()
+2026-07-26 21:13:26,350 INFO sqlalchemy.engine.Engine CREATE INDEX ix_settings_is_deleted ON settings (is_deleted)
+2026-07-26 21:13:26,350 INFO sqlalchemy.engine.Engine [no key 0.00040s] ()
+2026-07-26 21:13:26,356 INFO sqlalchemy.engine.Engine CREATE INDEX ix_settings_created_at ON settings (created_at)
+2026-07-26 21:13:26,356 INFO sqlalchemy.engine.Engine [no key 0.00026s] ()
+2026-07-26 21:13:26,361 INFO sqlalchemy.engine.Engine CREATE INDEX ix_settings_group ON settings ("group")
+2026-07-26 21:13:26,362 INFO sqlalchemy.engine.Engine [no key 0.00025s] ()
+2026-07-26 21:13:26,367 INFO sqlalchemy.engine.Engine CREATE INDEX ix_settings_status ON settings (status)
+2026-07-26 21:13:26,368 INFO sqlalchemy.engine.Engine [no key 0.00037s] ()
+2026-07-26 21:13:26,374 INFO sqlalchemy.engine.Engine 
+CREATE TABLE role_permissions (
+	role_id UUID NOT NULL, 
+	permission_id UUID NOT NULL, 
+	id UUID NOT NULL, 
+	created_at DATETIME DEFAULT (CURRENT_TIMESTAMP) NOT NULL, 
+	updated_at DATETIME DEFAULT (CURRENT_TIMESTAMP) NOT NULL, 
+	created_by VARCHAR(255), 
+	updated_by VARCHAR(255), 
+	status VARCHAR(50) NOT NULL, 
+	version INTEGER NOT NULL, 
+	is_deleted BOOLEAN NOT NULL, 
+	deleted_at DATETIME, 
+	deleted_by VARCHAR(255), 
+	notes TEXT, 
+	PRIMARY KEY (id), 
+	FOREIGN KEY(role_id) REFERENCES roles (id) ON DELETE CASCADE, 
+	FOREIGN KEY(permission_id) REFERENCES permissions (id) ON DELETE CASCADE
+)
+
+
+2026-07-26 21:13:26,374 INFO sqlalchemy.engine.Engine [no key 0.00024s] ()
+2026-07-26 21:13:26,381 INFO sqlalchemy.engine.Engine CREATE INDEX ix_role_permissions_created_at ON role_permissions (created_at)
+2026-07-26 21:13:26,381 INFO sqlalchemy.engine.Engine [no key 0.00023s] ()
+2026-07-26 21:13:26,387 INFO sqlalchemy.engine.Engine CREATE INDEX ix_role_permissions_is_deleted ON role_permissions (is_deleted)
+2026-07-26 21:13:26,388 INFO sqlalchemy.engine.Engine [no key 0.00022s] ()
+2026-07-26 21:13:26,393 INFO sqlalchemy.engine.Engine CREATE INDEX ix_role_permissions_id ON role_permissions (id)
+2026-07-26 21:13:26,393 INFO sqlalchemy.engine.Engine [no key 0.00024s] ()
+2026-07-26 21:13:26,399 INFO sqlalchemy.engine.Engine CREATE INDEX ix_role_permissions_created_by ON role_permissions (created_by)
+2026-07-26 21:13:26,400 INFO sqlalchemy.engine.Engine [no key 0.00035s] ()
+2026-07-26 21:13:26,405 INFO sqlalchemy.engine.Engine CREATE INDEX ix_role_permissions_status ON role_permissions (status)
+2026-07-26 21:13:26,405 INFO sqlalchemy.engine.Engine [no key 0.00027s] ()
+2026-07-26 21:13:26,411 INFO sqlalchemy.engine.Engine 
+CREATE TABLE users (
+	email VARCHAR(255) NOT NULL, 
+	username VARCHAR(100) NOT NULL, 
+	full_name VARCHAR(255) NOT NULL, 
+	password_hash VARCHAR(255) NOT NULL, 
+	role_id UUID, 
+	is_active BOOLEAN NOT NULL, 
+	is_verified BOOLEAN NOT NULL, 
+	is_superuser BOOLEAN NOT NULL, 
+	phone VARCHAR(20), 
+	avatar_url VARCHAR(500), 
+	last_login_at DATETIME, 
+	last_login_ip VARCHAR(45), 
+	login_attempts INTEGER NOT NULL, 
+	locked_until DATETIME, 
+	preferences TEXT, 
+	id UUID NOT NULL, 
+	created_at DATETIME DEFAULT (CURRENT_TIMESTAMP) NOT NULL, 
+	updated_at DATETIME DEFAULT (CURRENT_TIMESTAMP) NOT NULL, 
+	created_by VARCHAR(255), 
+	updated_by VARCHAR(255), 
+	status VARCHAR(50) NOT NULL, 
+	version INTEGER NOT NULL, 
+	is_deleted BOOLEAN NOT NULL, 
+	deleted_at DATETIME, 
+	deleted_by VARCHAR(255), 
+	notes TEXT, 
+	PRIMARY KEY (id), 
+	FOREIGN KEY(role_id) REFERENCES roles (id)
+)
+
+
+2026-07-26 21:13:26,412 INFO sqlalchemy.engine.Engine [no key 0.00036s] ()
+2026-07-26 21:13:26,418 INFO sqlalchemy.engine.Engine CREATE INDEX ix_users_id ON users (id)
+2026-07-26 21:13:26,419 INFO sqlalchemy.engine.Engine [no key 0.00027s] ()
+2026-07-26 21:13:26,425 INFO sqlalchemy.engine.Engine CREATE INDEX ix_users_created_by ON users (created_by)
+2026-07-26 21:13:26,425 INFO sqlalchemy.engine.Engine [no key 0.00065s] ()
+2026-07-26 21:13:26,431 INFO sqlalchemy.engine.Engine CREATE UNIQUE INDEX ix_users_username ON users (username)
+2026-07-26 21:13:26,432 INFO sqlalchemy.engine.Engine [no key 0.00043s] ()
+2026-07-26 21:13:26,438 INFO sqlalchemy.engine.Engine CREATE INDEX ix_users_is_deleted ON users (is_deleted)
+2026-07-26 21:13:26,438 INFO sqlalchemy.engine.Engine [no key 0.00023s] ()
+2026-07-26 21:13:26,444 INFO sqlalchemy.engine.Engine CREATE INDEX ix_users_created_at ON users (created_at)
+2026-07-26 21:13:26,444 INFO sqlalchemy.engine.Engine [no key 0.00034s] ()
+2026-07-26 21:13:26,450 INFO sqlalchemy.engine.Engine CREATE UNIQUE INDEX ix_users_email ON users (email)
+2026-07-26 21:13:26,451 INFO sqlalchemy.engine.Engine [no key 0.00033s] ()
+2026-07-26 21:13:26,457 INFO sqlalchemy.engine.Engine CREATE INDEX ix_users_status ON users (status)
+2026-07-26 21:13:26,457 INFO sqlalchemy.engine.Engine [no key 0.00025s] ()
+2026-07-26 21:13:26,463 INFO sqlalchemy.engine.Engine 
+CREATE TABLE current_affairs (
+	title VARCHAR(500) NOT NULL, 
+	description TEXT, 
+	content TEXT NOT NULL, 
+	summary TEXT, 
+	category VARCHAR(100), 
+	sub_category VARCHAR(100), 
+	event_date DATE, 
+	month VARCHAR(20), 
+	year INTEGER, 
+	location VARCHAR(300), 
+	state VARCHAR(100), 
+	is_karnataka_specific BOOLEAN NOT NULL, 
+	is_national BOOLEAN NOT NULL, 
+	is_international BOOLEAN NOT NULL, 
+	source VARCHAR(500), 
+	source_url VARCHAR(1000), 
+	is_verified BOOLEAN NOT NULL, 
+	verification_source VARCHAR(500), 
+	tags VARCHAR(500), 
+	language VARCHAR(50), 
+	image_url VARCHAR(1000), 
+	importance VARCHAR(20) NOT NULL, 
+	is_government_scheme_related BOOLEAN NOT NULL, 
+	government_scheme_id UUID, 
+	id UUID NOT NULL, 
+	created_at DATETIME DEFAULT (CURRENT_TIMESTAMP) NOT NULL, 
+	updated_at DATETIME DEFAULT (CURRENT_TIMESTAMP) NOT NULL, 
+	created_by VARCHAR(255), 
+	updated_by VARCHAR(255), 
+	status VARCHAR(50) NOT NULL, 
+	version INTEGER NOT NULL, 
+	is_deleted BOOLEAN NOT NULL, 
+	deleted_at DATETIME, 
+	deleted_by VARCHAR(255), 
+	notes TEXT, 
+	PRIMARY KEY (id), 
+	FOREIGN KEY(government_scheme_id) REFERENCES government_schemes (id)
+)
+
+
+2026-07-26 21:13:26,464 INFO sqlalchemy.engine.Engine [no key 0.00037s] ()
+2026-07-26 21:13:26,470 INFO sqlalchemy.engine.Engine CREATE INDEX ix_current_affairs_category ON current_affairs (category)
+2026-07-26 21:13:26,470 INFO sqlalchemy.engine.Engine [no key 0.00030s] ()
+2026-07-26 21:13:26,476 INFO sqlalchemy.engine.Engine CREATE INDEX ix_current_affairs_status ON current_affairs (status)
+2026-07-26 21:13:26,477 INFO sqlalchemy.engine.Engine [no key 0.00027s] ()
+2026-07-26 21:13:26,483 INFO sqlalchemy.engine.Engine CREATE INDEX ix_current_affairs_event_date ON current_affairs (event_date)
+2026-07-26 21:13:26,483 INFO sqlalchemy.engine.Engine [no key 0.00028s] ()
+2026-07-26 21:13:26,489 INFO sqlalchemy.engine.Engine CREATE INDEX ix_current_affairs_year ON current_affairs (year)
+2026-07-26 21:13:26,489 INFO sqlalchemy.engine.Engine [no key 0.00037s] ()
+2026-07-26 21:13:26,494 INFO sqlalchemy.engine.Engine CREATE INDEX ix_current_affairs_id ON current_affairs (id)
+2026-07-26 21:13:26,495 INFO sqlalchemy.engine.Engine [no key 0.00023s] ()
+2026-07-26 21:13:26,500 INFO sqlalchemy.engine.Engine CREATE INDEX ix_current_affairs_title ON current_affairs (title)
+2026-07-26 21:13:26,500 INFO sqlalchemy.engine.Engine [no key 0.00027s] ()
+2026-07-26 21:13:26,506 INFO sqlalchemy.engine.Engine CREATE INDEX ix_current_affairs_created_by ON current_affairs (created_by)
+2026-07-26 21:13:26,506 INFO sqlalchemy.engine.Engine [no key 0.00021s] ()
+2026-07-26 21:13:26,513 INFO sqlalchemy.engine.Engine CREATE INDEX ix_current_affairs_month ON current_affairs (month)
+2026-07-26 21:13:26,513 INFO sqlalchemy.engine.Engine [no key 0.00022s] ()
+2026-07-26 21:13:26,519 INFO sqlalchemy.engine.Engine CREATE INDEX ix_current_affairs_is_deleted ON current_affairs (is_deleted)
+2026-07-26 21:13:26,519 INFO sqlalchemy.engine.Engine [no key 0.00032s] ()
+2026-07-26 21:13:26,525 INFO sqlalchemy.engine.Engine CREATE INDEX ix_current_affairs_state ON current_affairs (state)
+2026-07-26 21:13:26,525 INFO sqlalchemy.engine.Engine [no key 0.00029s] ()
+2026-07-26 21:13:26,532 INFO sqlalchemy.engine.Engine CREATE INDEX ix_current_affairs_created_at ON current_affairs (created_at)
+2026-07-26 21:13:26,532 INFO sqlalchemy.engine.Engine [no key 0.00027s] ()
+2026-07-26 21:13:26,538 INFO sqlalchemy.engine.Engine 
+CREATE TABLE uploaded_files (
+	user_id UUID NOT NULL, 
+	original_filename VARCHAR(500) NOT NULL, 
+	stored_filename VARCHAR(500) NOT NULL, 
+	file_path VARCHAR(1000) NOT NULL, 
+	file_size BIGINT NOT NULL, 
+	mime_type VARCHAR(100) NOT NULL, 
+	file_hash VARCHAR(128), 
+	extension VARCHAR(20) NOT NULL, 
+	language VARCHAR(50), 
+	detected_language VARCHAR(50), 
+	page_count INTEGER, 
+	extracted_text TEXT, 
+	extracted_text_path VARCHAR(1000), 
+	ocr_text TEXT, 
+	ocr_text_path VARCHAR(1000), 
+	ocr_confidence FLOAT, 
+	ocr_processed BOOLEAN NOT NULL, 
+	metadata_json TEXT, 
+	storage_mode VARCHAR(20) NOT NULL, 
+	storage_path VARCHAR(1000), 
+	thumbnail_path VARCHAR(1000), 
+	is_processed BOOLEAN NOT NULL, 
+	processing_error TEXT, 
+	processing_started_at VARCHAR(50), 
+	processing_completed_at VARCHAR(50), 
+	id UUID NOT NULL, 
+	created_at DATETIME DEFAULT (CURRENT_TIMESTAMP) NOT NULL, 
+	updated_at DATETIME DEFAULT (CURRENT_TIMESTAMP) NOT NULL, 
+	created_by VARCHAR(255), 
+	updated_by VARCHAR(255), 
+	status VARCHAR(50) NOT NULL, 
+	version INTEGER NOT NULL, 
+	is_deleted BOOLEAN NOT NULL, 
+	deleted_at DATETIME, 
+	deleted_by VARCHAR(255), 
+	notes TEXT, 
+	PRIMARY KEY (id), 
+	FOREIGN KEY(user_id) REFERENCES users (id)
+)
+
+
+2026-07-26 21:13:26,538 INFO sqlalchemy.engine.Engine [no key 0.00036s] ()
+2026-07-26 21:13:26,544 INFO sqlalchemy.engine.Engine CREATE INDEX ix_uploaded_files_file_hash ON uploaded_files (file_hash)
+2026-07-26 21:13:26,545 INFO sqlalchemy.engine.Engine [no key 0.00056s] ()
+2026-07-26 21:13:26,551 INFO sqlalchemy.engine.Engine CREATE INDEX ix_uploaded_files_status ON uploaded_files (status)
+2026-07-26 21:13:26,551 INFO sqlalchemy.engine.Engine [no key 0.00019s] ()
+2026-07-26 21:13:26,558 INFO sqlalchemy.engine.Engine CREATE INDEX ix_uploaded_files_id ON uploaded_files (id)
+2026-07-26 21:13:26,558 INFO sqlalchemy.engine.Engine [no key 0.00017s] ()
+2026-07-26 21:13:26,565 INFO sqlalchemy.engine.Engine CREATE INDEX ix_uploaded_files_language ON uploaded_files (language)
+2026-07-26 21:13:26,565 INFO sqlalchemy.engine.Engine [no key 0.00018s] ()
+2026-07-26 21:13:26,570 INFO sqlalchemy.engine.Engine CREATE INDEX ix_uploaded_files_user_id ON uploaded_files (user_id)
+2026-07-26 21:13:26,570 INFO sqlalchemy.engine.Engine [no key 0.00033s] ()
+2026-07-26 21:13:26,576 INFO sqlalchemy.engine.Engine CREATE INDEX ix_uploaded_files_created_by ON uploaded_files (created_by)
+2026-07-26 21:13:26,576 INFO sqlalchemy.engine.Engine [no key 0.00028s] ()
+2026-07-26 21:13:26,582 INFO sqlalchemy.engine.Engine CREATE INDEX ix_uploaded_files_is_deleted ON uploaded_files (is_deleted)
+2026-07-26 21:13:26,582 INFO sqlalchemy.engine.Engine [no key 0.00028s] ()
+2026-07-26 21:13:26,589 INFO sqlalchemy.engine.Engine CREATE INDEX ix_uploaded_files_created_at ON uploaded_files (created_at)
+2026-07-26 21:13:26,589 INFO sqlalchemy.engine.Engine [no key 0.00022s] ()
+2026-07-26 21:13:26,596 INFO sqlalchemy.engine.Engine 
+CREATE TABLE audit_logs (
+	user_id UUID, 
+	action VARCHAR(100) NOT NULL, 
+	resource_type VARCHAR(100) NOT NULL, 
+	resource_id VARCHAR(255), 
+	details_json TEXT, 
+	ip_address VARCHAR(45), 
+	user_agent VARCHAR(500), 
+	request_method VARCHAR(10), 
+	request_path VARCHAR(500), 
+	request_body TEXT, 
+	response_status INTEGER, 
+	response_body TEXT, 
+	execution_time_ms INTEGER, 
+	is_error BOOLEAN NOT NULL, 
+	error_message TEXT, 
+	session_id VARCHAR(255), 
+	id UUID NOT NULL, 
+	created_at DATETIME DEFAULT (CURRENT_TIMESTAMP) NOT NULL, 
+	updated_at DATETIME DEFAULT (CURRENT_TIMESTAMP) NOT NULL, 
+	created_by VARCHAR(255), 
+	updated_by VARCHAR(255), 
+	status VARCHAR(50) NOT NULL, 
+	version INTEGER NOT NULL, 
+	is_deleted BOOLEAN NOT NULL, 
+	deleted_at DATETIME, 
+	deleted_by VARCHAR(255), 
+	notes TEXT, 
+	PRIMARY KEY (id), 
+	FOREIGN KEY(user_id) REFERENCES users (id)
+)
+
+
+2026-07-26 21:13:26,596 INFO sqlalchemy.engine.Engine [no key 0.00027s] ()
+2026-07-26 21:13:26,603 INFO sqlalchemy.engine.Engine CREATE INDEX ix_audit_logs_id ON audit_logs (id)
+2026-07-26 21:13:26,603 INFO sqlalchemy.engine.Engine [no key 0.00026s] ()
+2026-07-26 21:13:26,610 INFO sqlalchemy.engine.Engine CREATE INDEX ix_audit_logs_resource_id ON audit_logs (resource_id)
+2026-07-26 21:13:26,610 INFO sqlalchemy.engine.Engine [no key 0.00044s] ()
+2026-07-26 21:13:26,616 INFO sqlalchemy.engine.Engine CREATE INDEX ix_audit_logs_resource_type ON audit_logs (resource_type)
+2026-07-26 21:13:26,617 INFO sqlalchemy.engine.Engine [no key 0.00036s] ()
+2026-07-26 21:13:26,629 INFO sqlalchemy.engine.Engine CREATE INDEX ix_audit_logs_created_by ON audit_logs (created_by)
+2026-07-26 21:13:26,630 INFO sqlalchemy.engine.Engine [no key 0.00042s] ()
+2026-07-26 21:13:26,636 INFO sqlalchemy.engine.Engine CREATE INDEX ix_audit_logs_action ON audit_logs (action)
+2026-07-26 21:13:26,637 INFO sqlalchemy.engine.Engine [no key 0.00034s] ()
+2026-07-26 21:13:26,642 INFO sqlalchemy.engine.Engine CREATE INDEX ix_audit_logs_is_deleted ON audit_logs (is_deleted)
+2026-07-26 21:13:26,643 INFO sqlalchemy.engine.Engine [no key 0.00076s] ()
+2026-07-26 21:13:26,648 INFO sqlalchemy.engine.Engine CREATE INDEX ix_audit_logs_user_id ON audit_logs (user_id)
+2026-07-26 21:13:26,648 INFO sqlalchemy.engine.Engine [no key 0.00019s] ()
+2026-07-26 21:13:26,654 INFO sqlalchemy.engine.Engine CREATE INDEX ix_audit_logs_created_at ON audit_logs (created_at)
+2026-07-26 21:13:26,654 INFO sqlalchemy.engine.Engine [no key 0.00020s] ()
+2026-07-26 21:13:26,659 INFO sqlalchemy.engine.Engine CREATE INDEX ix_audit_logs_status ON audit_logs (status)
+2026-07-26 21:13:26,659 INFO sqlalchemy.engine.Engine [no key 0.00025s] ()
+2026-07-26 21:13:26,665 INFO sqlalchemy.engine.Engine 
+CREATE TABLE activity_logs (
+	user_id UUID NOT NULL, 
+	activity_type VARCHAR(100) NOT NULL, 
+	description VARCHAR(500) NOT NULL, 
+	resource_type VARCHAR(100), 
+	resource_id VARCHAR(255), 
+	metadata_json TEXT, 
+	ip_address VARCHAR(45), 
+	user_agent VARCHAR(500), 
+	session_duration INTEGER, 
+	is_important BOOLEAN NOT NULL, 
+	id UUID NOT NULL, 
+	created_at DATETIME DEFAULT (CURRENT_TIMESTAMP) NOT NULL, 
+	updated_at DATETIME DEFAULT (CURRENT_TIMESTAMP) NOT NULL, 
+	created_by VARCHAR(255), 
+	updated_by VARCHAR(255), 
+	status VARCHAR(50) NOT NULL, 
+	version INTEGER NOT NULL, 
+	is_deleted BOOLEAN NOT NULL, 
+	deleted_at DATETIME, 
+	deleted_by VARCHAR(255), 
+	notes TEXT, 
+	PRIMARY KEY (id), 
+	FOREIGN KEY(user_id) REFERENCES users (id)
+)
+
+
+2026-07-26 21:13:26,665 INFO sqlalchemy.engine.Engine [no key 0.00027s] ()
+2026-07-26 21:13:26,672 INFO sqlalchemy.engine.Engine CREATE INDEX ix_activity_logs_status ON activity_logs (status)
+2026-07-26 21:13:26,672 INFO sqlalchemy.engine.Engine [no key 0.00022s] ()
+2026-07-26 21:13:26,679 INFO sqlalchemy.engine.Engine CREATE INDEX ix_activity_logs_id ON activity_logs (id)
+2026-07-26 21:13:26,679 INFO sqlalchemy.engine.Engine [no key 0.00025s] ()
+2026-07-26 21:13:26,686 INFO sqlalchemy.engine.Engine CREATE INDEX ix_activity_logs_created_by ON activity_logs (created_by)
+2026-07-26 21:13:26,686 INFO sqlalchemy.engine.Engine [no key 0.00026s] ()
+2026-07-26 21:13:26,691 INFO sqlalchemy.engine.Engine CREATE INDEX ix_activity_logs_is_deleted ON activity_logs (is_deleted)
+2026-07-26 21:13:26,692 INFO sqlalchemy.engine.Engine [no key 0.00035s] ()
+2026-07-26 21:13:26,698 INFO sqlalchemy.engine.Engine CREATE INDEX ix_activity_logs_activity_type ON activity_logs (activity_type)
+2026-07-26 21:13:26,698 INFO sqlalchemy.engine.Engine [no key 0.00036s] ()
+2026-07-26 21:13:26,704 INFO sqlalchemy.engine.Engine CREATE INDEX ix_activity_logs_created_at ON activity_logs (created_at)
+2026-07-26 21:13:26,704 INFO sqlalchemy.engine.Engine [no key 0.00026s] ()
+2026-07-26 21:13:26,710 INFO sqlalchemy.engine.Engine CREATE INDEX ix_activity_logs_user_id ON activity_logs (user_id)
+2026-07-26 21:13:26,710 INFO sqlalchemy.engine.Engine [no key 0.00026s] ()
+2026-07-26 21:13:26,717 INFO sqlalchemy.engine.Engine 
+CREATE TABLE syllabi (
+	file_id UUID, 
+	exam_name VARCHAR(300) NOT NULL, 
+	exam_type VARCHAR(100), 
+	conducting_body VARCHAR(300), 
+	year INTEGER, 
+	description TEXT, 
+	raw_text TEXT, 
+	total_marks INTEGER, 
+	total_questions INTEGER, 
+	duration_minutes INTEGER, 
+	language VARCHAR(50), 
+	sections_json TEXT, 
+	is_official BOOLEAN NOT NULL, 
+	source_url VARCHAR(1000), 
+	source_notification VARCHAR(500), 
+	id UUID NOT NULL, 
+	created_at DATETIME DEFAULT (CURRENT_TIMESTAMP) NOT NULL, 
+	updated_at DATETIME DEFAULT (CURRENT_TIMESTAMP) NOT NULL, 
+	created_by VARCHAR(255), 
+	updated_by VARCHAR(255), 
+	status VARCHAR(50) NOT NULL, 
+	version INTEGER NOT NULL, 
+	is_deleted BOOLEAN NOT NULL, 
+	deleted_at DATETIME, 
+	deleted_by VARCHAR(255), 
+	notes TEXT, 
+	PRIMARY KEY (id), 
+	FOREIGN KEY(file_id) REFERENCES uploaded_files (id)
+)
+
+
+2026-07-26 21:13:26,718 INFO sqlalchemy.engine.Engine [no key 0.00030s] ()
+2026-07-26 21:13:26,723 INFO sqlalchemy.engine.Engine CREATE INDEX ix_syllabi_is_deleted ON syllabi (is_deleted)
+2026-07-26 21:13:26,724 INFO sqlalchemy.engine.Engine [no key 0.00024s] ()
+2026-07-26 21:13:26,730 INFO sqlalchemy.engine.Engine CREATE INDEX ix_syllabi_created_at ON syllabi (created_at)
+2026-07-26 21:13:26,730 INFO sqlalchemy.engine.Engine [no key 0.00030s] ()
+2026-07-26 21:13:26,735 INFO sqlalchemy.engine.Engine CREATE INDEX ix_syllabi_created_by ON syllabi (created_by)
+2026-07-26 21:13:26,735 INFO sqlalchemy.engine.Engine [no key 0.00020s] ()
+2026-07-26 21:13:26,742 INFO sqlalchemy.engine.Engine CREATE INDEX ix_syllabi_status ON syllabi (status)
+2026-07-26 21:13:26,743 INFO sqlalchemy.engine.Engine [no key 0.00044s] ()
+2026-07-26 21:13:26,749 INFO sqlalchemy.engine.Engine CREATE INDEX ix_syllabi_exam_type ON syllabi (exam_type)
+2026-07-26 21:13:26,750 INFO sqlalchemy.engine.Engine [no key 0.00028s] ()
+2026-07-26 21:13:26,756 INFO sqlalchemy.engine.Engine CREATE INDEX ix_syllabi_id ON syllabi (id)
+2026-07-26 21:13:26,756 INFO sqlalchemy.engine.Engine [no key 0.00024s] ()
+2026-07-26 21:13:26,763 INFO sqlalchemy.engine.Engine CREATE INDEX ix_syllabi_year ON syllabi (year)
+2026-07-26 21:13:26,764 INFO sqlalchemy.engine.Engine [no key 0.00037s] ()
+2026-07-26 21:13:26,770 INFO sqlalchemy.engine.Engine CREATE INDEX ix_syllabi_exam_name ON syllabi (exam_name)
+2026-07-26 21:13:26,770 INFO sqlalchemy.engine.Engine [no key 0.00023s] ()
+2026-07-26 21:13:26,777 INFO sqlalchemy.engine.Engine CREATE INDEX ix_syllabi_file_id ON syllabi (file_id)
+2026-07-26 21:13:26,778 INFO sqlalchemy.engine.Engine [no key 0.00040s] ()
+2026-07-26 21:13:26,785 INFO sqlalchemy.engine.Engine 
+CREATE TABLE previous_year_questions (
+	file_id UUID, 
+	exam_name VARCHAR(300) NOT NULL, 
+	year INTEGER NOT NULL, 
+	paper_set VARCHAR(50), 
+	topic VARCHAR(300), 
+	sub_topic VARCHAR(300), 
+	difficulty VARCHAR(50), 
+	language VARCHAR(50), 
+	question_type VARCHAR(100), 
+	question_text TEXT NOT NULL, 
+	option_a TEXT, 
+	option_b TEXT, 
+	option_c TEXT, 
+	option_d TEXT, 
+	correct_answer VARCHAR(10), 
+	correct_answer_text TEXT, 
+	explanation TEXT, 
+	marks INTEGER, 
+	source_page INTEGER, 
+	keywords VARCHAR(500), 
+	is_verified BOOLEAN NOT NULL, 
+	verification_source VARCHAR(500), 
+	raw_text TEXT, 
+	id UUID NOT NULL, 
+	created_at DATETIME DEFAULT (CURRENT_TIMESTAMP) NOT NULL, 
+	updated_at DATETIME DEFAULT (CURRENT_TIMESTAMP) NOT NULL, 
+	created_by VARCHAR(255), 
+	updated_by VARCHAR(255), 
+	status VARCHAR(50) NOT NULL, 
+	version INTEGER NOT NULL, 
+	is_deleted BOOLEAN NOT NULL, 
+	deleted_at DATETIME, 
+	deleted_by VARCHAR(255), 
+	notes TEXT, 
+	PRIMARY KEY (id), 
+	FOREIGN KEY(file_id) REFERENCES uploaded_files (id)
+)
+
+
+2026-07-26 21:13:26,786 INFO sqlalchemy.engine.Engine [no key 0.00024s] ()
+2026-07-26 21:13:26,792 INFO sqlalchemy.engine.Engine CREATE INDEX ix_previous_year_questions_year ON previous_year_questions (year)
+2026-07-26 21:13:26,793 INFO sqlalchemy.engine.Engine [no key 0.00060s] ()
+2026-07-26 21:13:26,800 INFO sqlalchemy.engine.Engine CREATE INDEX ix_previous_year_questions_exam_name ON previous_year_questions (exam_name)
+2026-07-26 21:13:26,800 INFO sqlalchemy.engine.Engine [no key 0.00025s] ()
+2026-07-26 21:13:26,808 INFO sqlalchemy.engine.Engine CREATE INDEX ix_previous_year_questions_is_deleted ON previous_year_questions (is_deleted)
+2026-07-26 21:13:26,809 INFO sqlalchemy.engine.Engine [no key 0.00053s] ()
+2026-07-26 21:13:26,815 INFO sqlalchemy.engine.Engine CREATE INDEX ix_previous_year_questions_created_at ON previous_year_questions (created_at)
+2026-07-26 21:13:26,815 INFO sqlalchemy.engine.Engine [no key 0.00021s] ()
+2026-07-26 21:13:26,822 INFO sqlalchemy.engine.Engine CREATE INDEX ix_previous_year_questions_file_id ON previous_year_questions (file_id)
+2026-07-26 21:13:26,822 INFO sqlalchemy.engine.Engine [no key 0.00035s] ()
+2026-07-26 21:13:26,828 INFO sqlalchemy.engine.Engine CREATE INDEX ix_previous_year_questions_status ON previous_year_questions (status)
+2026-07-26 21:13:26,829 INFO sqlalchemy.engine.Engine [no key 0.00041s] ()
+2026-07-26 21:13:26,836 INFO sqlalchemy.engine.Engine CREATE INDEX ix_previous_year_questions_id ON previous_year_questions (id)
+2026-07-26 21:13:26,837 INFO sqlalchemy.engine.Engine [no key 0.00040s] ()
+2026-07-26 21:13:26,843 INFO sqlalchemy.engine.Engine CREATE INDEX ix_previous_year_questions_topic ON previous_year_questions (topic)
+2026-07-26 21:13:26,843 INFO sqlalchemy.engine.Engine [no key 0.00039s] ()
+2026-07-26 21:13:26,850 INFO sqlalchemy.engine.Engine CREATE INDEX ix_previous_year_questions_created_by ON previous_year_questions (created_by)
+2026-07-26 21:13:26,851 INFO sqlalchemy.engine.Engine [no key 0.00039s] ()
+2026-07-26 21:13:26,858 INFO sqlalchemy.engine.Engine 
+CREATE TABLE ocr_data (
+	file_id UUID NOT NULL, 
+	raw_text TEXT, 
+	cleaned_text TEXT, 
+	ocr_engine VARCHAR(50), 
+	ocr_confidence FLOAT, 
+	language_detected VARCHAR(50), 
+	language_confidence FLOAT, 
+	processing_time_ms INTEGER, 
+	page_count INTEGER, 
+	total_words INTEGER, 
+	total_characters INTEGER, 
+	orientation VARCHAR(20), 
+	image_quality VARCHAR(50), 
+	enhancement_applied BOOLEAN NOT NULL, 
+	noise_removed BOOLEAN NOT NULL, 
+	deskewed BOOLEAN NOT NULL, 
+	tables_detected INTEGER, 
+	tables_json TEXT, 
+	headings_detected INTEGER, 
+	headings_json TEXT, 
+	page_numbers_detected INTEGER, 
+	page_numbers_json TEXT, 
+	duplicates_removed INTEGER, 
+	paragraphs_json TEXT, 
+	metadata_json TEXT, 
+	id UUID NOT NULL, 
+	created_at DATETIME DEFAULT (CURRENT_TIMESTAMP) NOT NULL, 
+	updated_at DATETIME DEFAULT (CURRENT_TIMESTAMP) NOT NULL, 
+	created_by VARCHAR(255), 
+	updated_by VARCHAR(255), 
+	status VARCHAR(50) NOT NULL, 
+	version INTEGER NOT NULL, 
+	is_deleted BOOLEAN NOT NULL, 
+	deleted_at DATETIME, 
+	deleted_by VARCHAR(255), 
+	notes TEXT, 
+	PRIMARY KEY (id), 
+	FOREIGN KEY(file_id) REFERENCES uploaded_files (id)
+)
+
+
+2026-07-26 21:13:26,859 INFO sqlalchemy.engine.Engine [no key 0.00037s] ()
+2026-07-26 21:13:26,866 INFO sqlalchemy.engine.Engine CREATE INDEX ix_ocr_data_created_at ON ocr_data (created_at)
+2026-07-26 21:13:26,866 INFO sqlalchemy.engine.Engine [no key 0.00045s] ()
+2026-07-26 21:13:26,873 INFO sqlalchemy.engine.Engine CREATE INDEX ix_ocr_data_status ON ocr_data (status)
+2026-07-26 21:13:26,874 INFO sqlalchemy.engine.Engine [no key 0.00042s] ()
+2026-07-26 21:13:26,882 INFO sqlalchemy.engine.Engine CREATE INDEX ix_ocr_data_id ON ocr_data (id)
+2026-07-26 21:13:26,883 INFO sqlalchemy.engine.Engine [no key 0.00066s] ()
+2026-07-26 21:13:26,889 INFO sqlalchemy.engine.Engine CREATE INDEX ix_ocr_data_created_by ON ocr_data (created_by)
+2026-07-26 21:13:26,889 INFO sqlalchemy.engine.Engine [no key 0.00038s] ()
+2026-07-26 21:13:26,896 INFO sqlalchemy.engine.Engine CREATE UNIQUE INDEX ix_ocr_data_file_id ON ocr_data (file_id)
+2026-07-26 21:13:26,896 INFO sqlalchemy.engine.Engine [no key 0.00030s] ()
+2026-07-26 21:13:26,904 INFO sqlalchemy.engine.Engine CREATE INDEX ix_ocr_data_is_deleted ON ocr_data (is_deleted)
+2026-07-26 21:13:26,904 INFO sqlalchemy.engine.Engine [no key 0.00075s] ()
+2026-07-26 21:13:26,912 INFO sqlalchemy.engine.Engine 
+CREATE TABLE images (
+	file_id UUID NOT NULL, 
+	image_path VARCHAR(1000) NOT NULL, 
+	thumbnail_path VARCHAR(1000), 
+	page_number INTEGER, 
+	width INTEGER, 
+	height INTEGER, 
+	dpi INTEGER, 
+	format VARCHAR(20), 
+	size_bytes INTEGER, 
+	hash VARCHAR(128), 
+	ocr_text TEXT, 
+	ocr_confidence FLOAT, 
+	is_enhanced BOOLEAN NOT NULL, 
+	enhancement_type VARCHAR(100), 
+	contains_table BOOLEAN NOT NULL, 
+	contains_text BOOLEAN NOT NULL, 
+	language_detected VARCHAR(50), 
+	metadata_json TEXT, 
+	id UUID NOT NULL, 
+	created_at DATETIME DEFAULT (CURRENT_TIMESTAMP) NOT NULL, 
+	updated_at DATETIME DEFAULT (CURRENT_TIMESTAMP) NOT NULL, 
+	created_by VARCHAR(255), 
+	updated_by VARCHAR(255), 
+	status VARCHAR(50) NOT NULL, 
+	version INTEGER NOT NULL, 
+	is_deleted BOOLEAN NOT NULL, 
+	deleted_at DATETIME, 
+	deleted_by VARCHAR(255), 
+	notes TEXT, 
+	PRIMARY KEY (id), 
+	FOREIGN KEY(file_id) REFERENCES uploaded_files (id)
+)
+
+
+2026-07-26 21:13:26,912 INFO sqlalchemy.engine.Engine [no key 0.00053s] ()
+2026-07-26 21:13:26,919 INFO sqlalchemy.engine.Engine CREATE INDEX ix_images_created_at ON images (created_at)
+2026-07-26 21:13:26,920 INFO sqlalchemy.engine.Engine [no key 0.00025s] ()
+2026-07-26 21:13:26,927 INFO sqlalchemy.engine.Engine CREATE INDEX ix_images_status ON images (status)
+2026-07-26 21:13:26,927 INFO sqlalchemy.engine.Engine [no key 0.00025s] ()
+2026-07-26 21:13:26,934 INFO sqlalchemy.engine.Engine CREATE INDEX ix_images_id ON images (id)
+2026-07-26 21:13:26,935 INFO sqlalchemy.engine.Engine [no key 0.00025s] ()
+2026-07-26 21:13:26,942 INFO sqlalchemy.engine.Engine CREATE INDEX ix_images_created_by ON images (created_by)
+2026-07-26 21:13:26,942 INFO sqlalchemy.engine.Engine [no key 0.00038s] ()
+2026-07-26 21:13:26,950 INFO sqlalchemy.engine.Engine CREATE INDEX ix_images_file_id ON images (file_id)
+2026-07-26 21:13:26,950 INFO sqlalchemy.engine.Engine [no key 0.00027s] ()
+2026-07-26 21:13:26,956 INFO sqlalchemy.engine.Engine CREATE INDEX ix_images_is_deleted ON images (is_deleted)
+2026-07-26 21:13:26,956 INFO sqlalchemy.engine.Engine [no key 0.00039s] ()
+2026-07-26 21:13:26,964 INFO sqlalchemy.engine.Engine 
+CREATE TABLE ai_jobs (
+	user_id UUID, 
+	job_type VARCHAR(100) NOT NULL, 
+	status VARCHAR(50) NOT NULL, 
+	priority INTEGER NOT NULL, 
+	progress FLOAT, 
+	input_data_json TEXT, 
+	output_data_json TEXT, 
+	error_message TEXT, 
+	error_traceback TEXT, 
+	started_at VARCHAR(50), 
+	completed_at VARCHAR(50), 
+	processing_time_ms INTEGER, 
+	retry_count INTEGER, 
+	max_retries INTEGER, 
+	webhook_url VARCHAR(1000), 
+	celery_task_id VARCHAR(255), 
+	ai_model VARCHAR(100), 
+	prompt_tokens INTEGER, 
+	completion_tokens INTEGER, 
+	total_tokens INTEGER, 
+	cost_estimate FLOAT, 
+	file_id UUID, 
+	result_file_path VARCHAR(1000), 
+	id UUID NOT NULL, 
+	created_at DATETIME DEFAULT (CURRENT_TIMESTAMP) NOT NULL, 
+	updated_at DATETIME DEFAULT (CURRENT_TIMESTAMP) NOT NULL, 
+	created_by VARCHAR(255), 
+	updated_by VARCHAR(255), 
+	version INTEGER NOT NULL, 
+	is_deleted BOOLEAN NOT NULL, 
+	deleted_at DATETIME, 
+	deleted_by VARCHAR(255), 
+	notes TEXT, 
+	PRIMARY KEY (id), 
+	FOREIGN KEY(user_id) REFERENCES users (id), 
+	FOREIGN KEY(file_id) REFERENCES uploaded_files (id)
+)
+
+
+2026-07-26 21:13:26,965 INFO sqlalchemy.engine.Engine [no key 0.00027s] ()
+2026-07-26 21:13:26,970 INFO sqlalchemy.engine.Engine CREATE INDEX ix_ai_jobs_user_id ON ai_jobs (user_id)
+2026-07-26 21:13:26,970 INFO sqlalchemy.engine.Engine [no key 0.00033s] ()
+2026-07-26 21:13:26,978 INFO sqlalchemy.engine.Engine CREATE INDEX ix_ai_jobs_created_by ON ai_jobs (created_by)
+2026-07-26 21:13:26,978 INFO sqlalchemy.engine.Engine [no key 0.00024s] ()
+2026-07-26 21:13:26,984 INFO sqlalchemy.engine.Engine CREATE INDEX ix_ai_jobs_job_type ON ai_jobs (job_type)
+2026-07-26 21:13:26,985 INFO sqlalchemy.engine.Engine [no key 0.00042s] ()
+2026-07-26 21:13:26,992 INFO sqlalchemy.engine.Engine CREATE INDEX ix_ai_jobs_created_at ON ai_jobs (created_at)
+2026-07-26 21:13:26,992 INFO sqlalchemy.engine.Engine [no key 0.00024s] ()
+2026-07-26 21:13:27,000 INFO sqlalchemy.engine.Engine CREATE INDEX ix_ai_jobs_celery_task_id ON ai_jobs (celery_task_id)
+2026-07-26 21:13:27,000 INFO sqlalchemy.engine.Engine [no key 0.00047s] ()
+2026-07-26 21:13:27,006 INFO sqlalchemy.engine.Engine CREATE INDEX ix_ai_jobs_is_deleted ON ai_jobs (is_deleted)
+2026-07-26 21:13:27,007 INFO sqlalchemy.engine.Engine [no key 0.00040s] ()
+2026-07-26 21:13:27,013 INFO sqlalchemy.engine.Engine CREATE INDEX ix_ai_jobs_status ON ai_jobs (status)
+2026-07-26 21:13:27,013 INFO sqlalchemy.engine.Engine [no key 0.00021s] ()
+2026-07-26 21:13:27,020 INFO sqlalchemy.engine.Engine CREATE INDEX ix_ai_jobs_id ON ai_jobs (id)
+2026-07-26 21:13:27,020 INFO sqlalchemy.engine.Engine [no key 0.00020s] ()
+2026-07-26 21:13:27,028 INFO sqlalchemy.engine.Engine 
+CREATE TABLE pdf_notes (
+	file_id UUID NOT NULL, 
+	user_id UUID NOT NULL, 
+	page_number INTEGER NOT NULL, 
+	note_type VARCHAR(50) NOT NULL, 
+	content TEXT, 
+	color VARCHAR(20), 
+	position_x FLOAT, 
+	position_y FLOAT, 
+	width FLOAT, 
+	height FLOAT, 
+	rect_json TEXT, 
+	text_content VARCHAR(1000), 
+	page_label VARCHAR(50), 
+	is_public BOOLEAN NOT NULL, 
+	tags VARCHAR(500), 
+	metadata_json TEXT, 
+	is_archived BOOLEAN NOT NULL, 
+	id UUID NOT NULL, 
+	created_at DATETIME DEFAULT (CURRENT_TIMESTAMP) NOT NULL, 
+	updated_at DATETIME DEFAULT (CURRENT_TIMESTAMP) NOT NULL, 
+	created_by VARCHAR(255), 
+	updated_by VARCHAR(255), 
+	status VARCHAR(50) NOT NULL, 
+	version INTEGER NOT NULL, 
+	is_deleted BOOLEAN NOT NULL, 
+	deleted_at DATETIME, 
+	deleted_by VARCHAR(255), 
+	notes TEXT, 
+	PRIMARY KEY (id), 
+	FOREIGN KEY(file_id) REFERENCES uploaded_files (id), 
+	FOREIGN KEY(user_id) REFERENCES users (id)
+)
+
+
+2026-07-26 21:13:27,028 INFO sqlalchemy.engine.Engine [no key 0.00042s] ()
+2026-07-26 21:13:27,035 INFO sqlalchemy.engine.Engine CREATE INDEX ix_pdf_notes_id ON pdf_notes (id)
+2026-07-26 21:13:27,035 INFO sqlalchemy.engine.Engine [no key 0.00038s] ()
+2026-07-26 21:13:27,043 INFO sqlalchemy.engine.Engine CREATE INDEX ix_pdf_notes_status ON pdf_notes (status)
+2026-07-26 21:13:27,043 INFO sqlalchemy.engine.Engine [no key 0.00024s] ()
+2026-07-26 21:13:27,049 INFO sqlalchemy.engine.Engine CREATE INDEX ix_pdf_notes_user_id ON pdf_notes (user_id)
+2026-07-26 21:13:27,049 INFO sqlalchemy.engine.Engine [no key 0.00022s] ()
+2026-07-26 21:13:27,056 INFO sqlalchemy.engine.Engine CREATE INDEX ix_pdf_notes_created_by ON pdf_notes (created_by)
+2026-07-26 21:13:27,057 INFO sqlalchemy.engine.Engine [no key 0.00041s] ()
+2026-07-26 21:13:27,069 INFO sqlalchemy.engine.Engine CREATE INDEX ix_pdf_notes_note_type ON pdf_notes (note_type)
+2026-07-26 21:13:27,069 INFO sqlalchemy.engine.Engine [no key 0.00051s] ()
+2026-07-26 21:13:27,077 INFO sqlalchemy.engine.Engine CREATE INDEX ix_pdf_notes_is_deleted ON pdf_notes (is_deleted)
+2026-07-26 21:13:27,077 INFO sqlalchemy.engine.Engine [no key 0.00029s] ()
+2026-07-26 21:13:27,085 INFO sqlalchemy.engine.Engine CREATE INDEX ix_pdf_notes_created_at ON pdf_notes (created_at)
+2026-07-26 21:13:27,085 INFO sqlalchemy.engine.Engine [no key 0.00031s] ()
+2026-07-26 21:13:27,093 INFO sqlalchemy.engine.Engine CREATE INDEX ix_pdf_notes_file_id ON pdf_notes (file_id)
+2026-07-26 21:13:27,093 INFO sqlalchemy.engine.Engine [no key 0.00023s] ()
+2026-07-26 21:13:27,101 INFO sqlalchemy.engine.Engine 
+CREATE TABLE pdf_bookmarks (
+	file_id UUID NOT NULL, 
+	user_id UUID NOT NULL, 
+	page_number INTEGER NOT NULL, 
+	label VARCHAR(300) NOT NULL, 
+	description TEXT, 
+	color VARCHAR(20), 
+	id UUID NOT NULL, 
+	created_at DATETIME DEFAULT (CURRENT_TIMESTAMP) NOT NULL, 
+	updated_at DATETIME DEFAULT (CURRENT_TIMESTAMP) NOT NULL, 
+	created_by VARCHAR(255), 
+	updated_by VARCHAR(255), 
+	status VARCHAR(50) NOT NULL, 
+	version INTEGER NOT NULL, 
+	is_deleted BOOLEAN NOT NULL, 
+	deleted_at DATETIME, 
+	deleted_by VARCHAR(255), 
+	notes TEXT, 
+	PRIMARY KEY (id), 
+	FOREIGN KEY(file_id) REFERENCES uploaded_files (id), 
+	FOREIGN KEY(user_id) REFERENCES users (id)
+)
+
+
+2026-07-26 21:13:27,101 INFO sqlalchemy.engine.Engine [no key 0.00034s] ()
+2026-07-26 21:13:27,107 INFO sqlalchemy.engine.Engine CREATE INDEX ix_pdf_bookmarks_created_by ON pdf_bookmarks (created_by)
+2026-07-26 21:13:27,107 INFO sqlalchemy.engine.Engine [no key 0.00022s] ()
+2026-07-26 21:13:27,113 INFO sqlalchemy.engine.Engine CREATE INDEX ix_pdf_bookmarks_file_id ON pdf_bookmarks (file_id)
+2026-07-26 21:13:27,113 INFO sqlalchemy.engine.Engine [no key 0.00020s] ()
+2026-07-26 21:13:27,120 INFO sqlalchemy.engine.Engine CREATE INDEX ix_pdf_bookmarks_is_deleted ON pdf_bookmarks (is_deleted)
+2026-07-26 21:13:27,121 INFO sqlalchemy.engine.Engine [no key 0.00035s] ()
+2026-07-26 21:13:27,126 INFO sqlalchemy.engine.Engine CREATE INDEX ix_pdf_bookmarks_created_at ON pdf_bookmarks (created_at)
+2026-07-26 21:13:27,127 INFO sqlalchemy.engine.Engine [no key 0.00032s] ()
+2026-07-26 21:13:27,133 INFO sqlalchemy.engine.Engine CREATE INDEX ix_pdf_bookmarks_status ON pdf_bookmarks (status)
+2026-07-26 21:13:27,133 INFO sqlalchemy.engine.Engine [no key 0.00028s] ()
+2026-07-26 21:13:27,140 INFO sqlalchemy.engine.Engine CREATE INDEX ix_pdf_bookmarks_id ON pdf_bookmarks (id)
+2026-07-26 21:13:27,140 INFO sqlalchemy.engine.Engine [no key 0.00031s] ()
+2026-07-26 21:13:27,146 INFO sqlalchemy.engine.Engine CREATE INDEX ix_pdf_bookmarks_user_id ON pdf_bookmarks (user_id)
+2026-07-26 21:13:27,147 INFO sqlalchemy.engine.Engine [no key 0.00037s] ()
+2026-07-26 21:13:27,152 INFO sqlalchemy.engine.Engine 
+CREATE TABLE pdf_annotations (
+	file_id UUID NOT NULL, 
+	user_id UUID NOT NULL, 
+	page_number INTEGER NOT NULL, 
+	annotation_type VARCHAR(50) NOT NULL, 
+	content TEXT, 
+	position_x FLOAT, 
+	position_y FLOAT, 
+	width FLOAT, 
+	height FLOAT, 
+	rect_json TEXT, 
+	color VARCHAR(20), 
+	opacity FLOAT, 
+	font_size INTEGER, 
+	font_color VARCHAR(20), 
+	metadata_json TEXT, 
+	is_public BOOLEAN NOT NULL, 
+	id UUID NOT NULL, 
+	created_at DATETIME DEFAULT (CURRENT_TIMESTAMP) NOT NULL, 
+	updated_at DATETIME DEFAULT (CURRENT_TIMESTAMP) NOT NULL, 
+	created_by VARCHAR(255), 
+	updated_by VARCHAR(255), 
+	status VARCHAR(50) NOT NULL, 
+	version INTEGER NOT NULL, 
+	is_deleted BOOLEAN NOT NULL, 
+	deleted_at DATETIME, 
+	deleted_by VARCHAR(255), 
+	notes TEXT, 
+	PRIMARY KEY (id), 
+	FOREIGN KEY(file_id) REFERENCES uploaded_files (id), 
+	FOREIGN KEY(user_id) REFERENCES users (id)
+)
+
+
+2026-07-26 21:13:27,153 INFO sqlalchemy.engine.Engine [no key 0.00021s] ()
+2026-07-26 21:13:27,159 INFO sqlalchemy.engine.Engine CREATE INDEX ix_pdf_annotations_user_id ON pdf_annotations (user_id)
+2026-07-26 21:13:27,159 INFO sqlalchemy.engine.Engine [no key 0.00038s] ()
+2026-07-26 21:13:27,168 INFO sqlalchemy.engine.Engine CREATE INDEX ix_pdf_annotations_created_by ON pdf_annotations (created_by)
+2026-07-26 21:13:27,168 INFO sqlalchemy.engine.Engine [no key 0.00022s] ()
+2026-07-26 21:13:27,173 INFO sqlalchemy.engine.Engine CREATE INDEX ix_pdf_annotations_file_id ON pdf_annotations (file_id)
+2026-07-26 21:13:27,174 INFO sqlalchemy.engine.Engine [no key 0.00027s] ()
+2026-07-26 21:13:27,180 INFO sqlalchemy.engine.Engine CREATE INDEX ix_pdf_annotations_is_deleted ON pdf_annotations (is_deleted)
+2026-07-26 21:13:27,181 INFO sqlalchemy.engine.Engine [no key 0.00041s] ()
+2026-07-26 21:13:27,187 INFO sqlalchemy.engine.Engine CREATE INDEX ix_pdf_annotations_created_at ON pdf_annotations (created_at)
+2026-07-26 21:13:27,187 INFO sqlalchemy.engine.Engine [no key 0.00033s] ()
+2026-07-26 21:13:27,194 INFO sqlalchemy.engine.Engine CREATE INDEX ix_pdf_annotations_status ON pdf_annotations (status)
+2026-07-26 21:13:27,194 INFO sqlalchemy.engine.Engine [no key 0.00036s] ()
+2026-07-26 21:13:27,200 INFO sqlalchemy.engine.Engine CREATE INDEX ix_pdf_annotations_id ON pdf_annotations (id)
+2026-07-26 21:13:27,200 INFO sqlalchemy.engine.Engine [no key 0.00022s] ()
+2026-07-26 21:13:27,207 INFO sqlalchemy.engine.Engine 
+CREATE TABLE topics (
+	syllabus_id UUID NOT NULL, 
+	name VARCHAR(300) NOT NULL, 
+	code VARCHAR(100), 
+	description TEXT, 
+	weightage FLOAT, 
+	marks INTEGER, 
+	question_count INTEGER, 
+	order_index INTEGER, 
+	section VARCHAR(200), 
+	language VARCHAR(50), 
+	is_required BOOLEAN NOT NULL, 
+	id UUID NOT NULL, 
+	created_at DATETIME DEFAULT (CURRENT_TIMESTAMP) NOT NULL, 
+	updated_at DATETIME DEFAULT (CURRENT_TIMESTAMP) NOT NULL, 
+	created_by VARCHAR(255), 
+	updated_by VARCHAR(255), 
+	status VARCHAR(50) NOT NULL, 
+	version INTEGER NOT NULL, 
+	is_deleted BOOLEAN NOT NULL, 
+	deleted_at DATETIME, 
+	deleted_by VARCHAR(255), 
+	notes TEXT, 
+	PRIMARY KEY (id), 
+	FOREIGN KEY(syllabus_id) REFERENCES syllabi (id)
+)
+
+
+2026-07-26 21:13:27,207 INFO sqlalchemy.engine.Engine [no key 0.00038s] ()
+2026-07-26 21:13:27,214 INFO sqlalchemy.engine.Engine CREATE INDEX ix_topics_syllabus_id ON topics (syllabus_id)
+2026-07-26 21:13:27,215 INFO sqlalchemy.engine.Engine [no key 0.00027s] ()
+2026-07-26 21:13:27,221 INFO sqlalchemy.engine.Engine CREATE INDEX ix_topics_status ON topics (status)
+2026-07-26 21:13:27,222 INFO sqlalchemy.engine.Engine [no key 0.00032s] ()
+2026-07-26 21:13:27,229 INFO sqlalchemy.engine.Engine CREATE INDEX ix_topics_id ON topics (id)
+2026-07-26 21:13:27,229 INFO sqlalchemy.engine.Engine [no key 0.00032s] ()
+2026-07-26 21:13:27,236 INFO sqlalchemy.engine.Engine CREATE INDEX ix_topics_is_deleted ON topics (is_deleted)
+2026-07-26 21:13:27,236 INFO sqlalchemy.engine.Engine [no key 0.00030s] ()
+2026-07-26 21:13:27,242 INFO sqlalchemy.engine.Engine CREATE INDEX ix_topics_created_by ON topics (created_by)
+2026-07-26 21:13:27,243 INFO sqlalchemy.engine.Engine [no key 0.00046s] ()
+2026-07-26 21:13:27,249 INFO sqlalchemy.engine.Engine CREATE INDEX ix_topics_code ON topics (code)
+2026-07-26 21:13:27,250 INFO sqlalchemy.engine.Engine [no key 0.00040s] ()
+2026-07-26 21:13:27,258 INFO sqlalchemy.engine.Engine CREATE INDEX ix_topics_created_at ON topics (created_at)
+2026-07-26 21:13:27,258 INFO sqlalchemy.engine.Engine [no key 0.00029s] ()
+2026-07-26 21:13:27,263 INFO sqlalchemy.engine.Engine 
+CREATE TABLE exam_patterns (
+	syllabus_id UUID, 
+	file_id UUID, 
+	exam_name VARCHAR(300) NOT NULL, 
+	exam_type VARCHAR(100), 
+	pattern_year INTEGER, 
+	total_marks INTEGER, 
+	total_questions INTEGER, 
+	duration_minutes INTEGER, 
+	sections_json TEXT, 
+	marking_scheme_json TEXT, 
+	negative_marking FLOAT, 
+	passing_marks INTEGER, 
+	difficulty_distribution_json TEXT, 
+	language VARCHAR(50), 
+	is_active BOOLEAN NOT NULL, 
+	source VARCHAR(500), 
+	raw_text TEXT, 
+	id UUID NOT NULL, 
+	created_at DATETIME DEFAULT (CURRENT_TIMESTAMP) NOT NULL, 
+	updated_at DATETIME DEFAULT (CURRENT_TIMESTAMP) NOT NULL, 
+	created_by VARCHAR(255), 
+	updated_by VARCHAR(255), 
+	status VARCHAR(50) NOT NULL, 
+	version INTEGER NOT NULL, 
+	is_deleted BOOLEAN NOT NULL, 
+	deleted_at DATETIME, 
+	deleted_by VARCHAR(255), 
+	notes TEXT, 
+	PRIMARY KEY (id), 
+	FOREIGN KEY(syllabus_id) REFERENCES syllabi (id), 
+	FOREIGN KEY(file_id) REFERENCES uploaded_files (id)
+)
+
+
+2026-07-26 21:13:27,264 INFO sqlalchemy.engine.Engine [no key 0.00025s] ()
+2026-07-26 21:13:27,271 INFO sqlalchemy.engine.Engine CREATE INDEX ix_exam_patterns_syllabus_id ON exam_patterns (syllabus_id)
+2026-07-26 21:13:27,271 INFO sqlalchemy.engine.Engine [no key 0.00037s] ()
+2026-07-26 21:13:27,277 INFO sqlalchemy.engine.Engine CREATE INDEX ix_exam_patterns_is_deleted ON exam_patterns (is_deleted)
+2026-07-26 21:13:27,277 INFO sqlalchemy.engine.Engine [no key 0.00030s] ()
+2026-07-26 21:13:27,283 INFO sqlalchemy.engine.Engine CREATE INDEX ix_exam_patterns_created_at ON exam_patterns (created_at)
+2026-07-26 21:13:27,283 INFO sqlalchemy.engine.Engine [no key 0.00021s] ()
+2026-07-26 21:13:27,291 INFO sqlalchemy.engine.Engine CREATE INDEX ix_exam_patterns_status ON exam_patterns (status)
+2026-07-26 21:13:27,291 INFO sqlalchemy.engine.Engine [no key 0.00029s] ()
+2026-07-26 21:13:27,298 INFO sqlalchemy.engine.Engine CREATE INDEX ix_exam_patterns_id ON exam_patterns (id)
+2026-07-26 21:13:27,298 INFO sqlalchemy.engine.Engine [no key 0.00026s] ()
+2026-07-26 21:13:27,305 INFO sqlalchemy.engine.Engine CREATE INDEX ix_exam_patterns_exam_name ON exam_patterns (exam_name)
+2026-07-26 21:13:27,305 INFO sqlalchemy.engine.Engine [no key 0.00046s] ()
+2026-07-26 21:13:27,311 INFO sqlalchemy.engine.Engine CREATE INDEX ix_exam_patterns_created_by ON exam_patterns (created_by)
+2026-07-26 21:13:27,311 INFO sqlalchemy.engine.Engine [no key 0.00032s] ()
+2026-07-26 21:13:27,319 INFO sqlalchemy.engine.Engine 
+CREATE TABLE sub_topics (
+	topic_id UUID NOT NULL, 
+	name VARCHAR(300) NOT NULL, 
+	code VARCHAR(100), 
+	description TEXT, 
+	weightage FLOAT, 
+	marks INTEGER, 
+	order_index INTEGER, 
+	language VARCHAR(50), 
+	id UUID NOT NULL, 
+	created_at DATETIME DEFAULT (CURRENT_TIMESTAMP) NOT NULL, 
+	updated_at DATETIME DEFAULT (CURRENT_TIMESTAMP) NOT NULL, 
+	created_by VARCHAR(255), 
+	updated_by VARCHAR(255), 
+	status VARCHAR(50) NOT NULL, 
+	version INTEGER NOT NULL, 
+	is_deleted BOOLEAN NOT NULL, 
+	deleted_at DATETIME, 
+	deleted_by VARCHAR(255), 
+	notes TEXT, 
+	PRIMARY KEY (id), 
+	FOREIGN KEY(topic_id) REFERENCES topics (id)
+)
+
+
+2026-07-26 21:13:27,319 INFO sqlalchemy.engine.Engine [no key 0.00047s] ()
+2026-07-26 21:13:27,325 INFO sqlalchemy.engine.Engine CREATE INDEX ix_sub_topics_created_at ON sub_topics (created_at)
+2026-07-26 21:13:27,326 INFO sqlalchemy.engine.Engine [no key 0.00071s] ()
+2026-07-26 21:13:27,334 INFO sqlalchemy.engine.Engine CREATE INDEX ix_sub_topics_topic_id ON sub_topics (topic_id)
+2026-07-26 21:13:27,335 INFO sqlalchemy.engine.Engine [no key 0.00042s] ()
+2026-07-26 21:13:27,340 INFO sqlalchemy.engine.Engine CREATE INDEX ix_sub_topics_status ON sub_topics (status)
+2026-07-26 21:13:27,341 INFO sqlalchemy.engine.Engine [no key 0.00053s] ()
+2026-07-26 21:13:27,347 INFO sqlalchemy.engine.Engine CREATE INDEX ix_sub_topics_id ON sub_topics (id)
+2026-07-26 21:13:27,348 INFO sqlalchemy.engine.Engine [no key 0.00036s] ()
+2026-07-26 21:13:27,353 INFO sqlalchemy.engine.Engine CREATE INDEX ix_sub_topics_created_by ON sub_topics (created_by)
+2026-07-26 21:13:27,354 INFO sqlalchemy.engine.Engine [no key 0.00030s] ()
+2026-07-26 21:13:27,360 INFO sqlalchemy.engine.Engine CREATE INDEX ix_sub_topics_is_deleted ON sub_topics (is_deleted)
+2026-07-26 21:13:27,360 INFO sqlalchemy.engine.Engine [no key 0.00040s] ()
+2026-07-26 21:13:27,368 INFO sqlalchemy.engine.Engine 
+CREATE TABLE generated_papers (
+	user_id UUID NOT NULL, 
+	exam_pattern_id UUID, 
+	exam_name VARCHAR(300) NOT NULL, 
+	paper_set VARCHAR(50) NOT NULL, 
+	title VARCHAR(500) NOT NULL, 
+	description TEXT, 
+	language VARCHAR(50) NOT NULL, 
+	total_marks INTEGER NOT NULL, 
+	total_questions INTEGER NOT NULL, 
+	duration_minutes INTEGER, 
+	difficulty_profile VARCHAR(100), 
+	instructions_json TEXT, 
+	sections_json TEXT, 
+	question_ids_json TEXT, 
+	pdf_path VARCHAR(1000), 
+	docx_path VARCHAR(1000), 
+	answer_key_path VARCHAR(1000), 
+	is_draft BOOLEAN NOT NULL, 
+	is_published BOOLEAN NOT NULL, 
+	published_at VARCHAR(50), 
+	generation_time_seconds FLOAT, 
+	ai_model VARCHAR(100), 
+	prompt_used TEXT, 
+	feedback_score FLOAT, 
+	feedback_count INTEGER, 
+	id UUID NOT NULL, 
+	created_at DATETIME DEFAULT (CURRENT_TIMESTAMP) NOT NULL, 
+	updated_at DATETIME DEFAULT (CURRENT_TIMESTAMP) NOT NULL, 
+	created_by VARCHAR(255), 
+	updated_by VARCHAR(255), 
+	status VARCHAR(50) NOT NULL, 
+	version INTEGER NOT NULL, 
+	is_deleted BOOLEAN NOT NULL, 
+	deleted_at DATETIME, 
+	deleted_by VARCHAR(255), 
+	notes TEXT, 
+	PRIMARY KEY (id), 
+	FOREIGN KEY(user_id) REFERENCES users (id), 
+	FOREIGN KEY(exam_pattern_id) REFERENCES exam_patterns (id)
+)
+
+
+2026-07-26 21:13:27,369 INFO sqlalchemy.engine.Engine [no key 0.00033s] ()
+2026-07-26 21:13:27,375 INFO sqlalchemy.engine.Engine CREATE INDEX ix_generated_papers_is_deleted ON generated_papers (is_deleted)
+2026-07-26 21:13:27,376 INFO sqlalchemy.engine.Engine [no key 0.00065s] ()
+2026-07-26 21:13:27,382 INFO sqlalchemy.engine.Engine CREATE INDEX ix_generated_papers_exam_name ON generated_papers (exam_name)
+2026-07-26 21:13:27,382 INFO sqlalchemy.engine.Engine [no key 0.00026s] ()
+2026-07-26 21:13:27,388 INFO sqlalchemy.engine.Engine CREATE INDEX ix_generated_papers_created_at ON generated_papers (created_at)
+2026-07-26 21:13:27,388 INFO sqlalchemy.engine.Engine [no key 0.00037s] ()
+2026-07-26 21:13:27,395 INFO sqlalchemy.engine.Engine CREATE INDEX ix_generated_papers_exam_pattern_id ON generated_papers (exam_pattern_id)
+2026-07-26 21:13:27,395 INFO sqlalchemy.engine.Engine [no key 0.00066s] ()
+2026-07-26 21:13:27,402 INFO sqlalchemy.engine.Engine CREATE INDEX ix_generated_papers_user_id ON generated_papers (user_id)
+2026-07-26 21:13:27,403 INFO sqlalchemy.engine.Engine [no key 0.00077s] ()
+2026-07-26 21:13:27,409 INFO sqlalchemy.engine.Engine CREATE INDEX ix_generated_papers_status ON generated_papers (status)
+2026-07-26 21:13:27,410 INFO sqlalchemy.engine.Engine [no key 0.00029s] ()
+2026-07-26 21:13:27,416 INFO sqlalchemy.engine.Engine CREATE INDEX ix_generated_papers_id ON generated_papers (id)
+2026-07-26 21:13:27,416 INFO sqlalchemy.engine.Engine [no key 0.00022s] ()
+2026-07-26 21:13:27,423 INFO sqlalchemy.engine.Engine CREATE INDEX ix_generated_papers_created_by ON generated_papers (created_by)
+2026-07-26 21:13:27,423 INFO sqlalchemy.engine.Engine [no key 0.00043s] ()
+2026-07-26 21:13:27,431 INFO sqlalchemy.engine.Engine 
+CREATE TABLE question_bank (
+	file_id UUID, 
+	topic_id UUID, 
+	sub_topic_id UUID, 
+	exam_name VARCHAR(300) NOT NULL, 
+	paper_set VARCHAR(50), 
+	topic_name VARCHAR(300), 
+	sub_topic_name VARCHAR(300), 
+	difficulty VARCHAR(50) NOT NULL, 
+	language VARCHAR(50) NOT NULL, 
+	question_type VARCHAR(100) NOT NULL, 
+	question_text TEXT NOT NULL, 
+	option_a TEXT, 
+	option_b TEXT, 
+	option_c TEXT, 
+	option_d TEXT, 
+	correct_answer VARCHAR(10) NOT NULL, 
+	correct_answer_text TEXT, 
+	explanation TEXT, 
+	reference_source VARCHAR(500), 
+	source_page_number INTEGER, 
+	weightage FLOAT, 
+	keywords VARCHAR(500), 
+	marks INTEGER NOT NULL, 
+	is_verified BOOLEAN NOT NULL, 
+	verification_status VARCHAR(50) NOT NULL, 
+	verification_notes TEXT, 
+	grammar_checked BOOLEAN NOT NULL, 
+	fact_checked BOOLEAN NOT NULL, 
+	usage_count INTEGER NOT NULL, 
+	source VARCHAR(100), 
+	hash VARCHAR(128), 
+	id UUID NOT NULL, 
+	created_at DATETIME DEFAULT (CURRENT_TIMESTAMP) NOT NULL, 
+	updated_at DATETIME DEFAULT (CURRENT_TIMESTAMP) NOT NULL, 
+	created_by VARCHAR(255), 
+	updated_by VARCHAR(255), 
+	status VARCHAR(50) NOT NULL, 
+	version INTEGER NOT NULL, 
+	is_deleted BOOLEAN NOT NULL, 
+	deleted_at DATETIME, 
+	deleted_by VARCHAR(255), 
+	notes TEXT, 
+	PRIMARY KEY (id), 
+	FOREIGN KEY(file_id) REFERENCES uploaded_files (id), 
+	FOREIGN KEY(topic_id) REFERENCES topics (id), 
+	FOREIGN KEY(sub_topic_id) REFERENCES sub_topics (id)
+)
+
+
+2026-07-26 21:13:27,432 INFO sqlalchemy.engine.Engine [no key 0.00086s] ()
+2026-07-26 21:13:27,439 INFO sqlalchemy.engine.Engine CREATE INDEX ix_question_bank_created_by ON question_bank (created_by)
+2026-07-26 21:13:27,439 INFO sqlalchemy.engine.Engine [no key 0.00032s] ()
+2026-07-26 21:13:27,445 INFO sqlalchemy.engine.Engine CREATE INDEX ix_question_bank_language ON question_bank (language)
+2026-07-26 21:13:27,446 INFO sqlalchemy.engine.Engine [no key 0.00035s] ()
+2026-07-26 21:13:27,452 INFO sqlalchemy.engine.Engine CREATE INDEX ix_question_bank_exam_name ON question_bank (exam_name)
+2026-07-26 21:13:27,452 INFO sqlalchemy.engine.Engine [no key 0.00031s] ()
+2026-07-26 21:13:27,459 INFO sqlalchemy.engine.Engine CREATE INDEX ix_question_bank_is_deleted ON question_bank (is_deleted)
+2026-07-26 21:13:27,459 INFO sqlalchemy.engine.Engine [no key 0.00031s] ()
+2026-07-26 21:13:27,465 INFO sqlalchemy.engine.Engine CREATE INDEX ix_question_bank_created_at ON question_bank (created_at)
+2026-07-26 21:13:27,465 INFO sqlalchemy.engine.Engine [no key 0.00037s] ()
+2026-07-26 21:13:27,472 INFO sqlalchemy.engine.Engine CREATE INDEX ix_question_bank_difficulty ON question_bank (difficulty)
+2026-07-26 21:13:27,472 INFO sqlalchemy.engine.Engine [no key 0.00031s] ()
+2026-07-26 21:13:27,479 INFO sqlalchemy.engine.Engine CREATE INDEX ix_question_bank_topic_id ON question_bank (topic_id)
+2026-07-26 21:13:27,479 INFO sqlalchemy.engine.Engine [no key 0.00035s] ()
+2026-07-26 21:13:27,486 INFO sqlalchemy.engine.Engine CREATE INDEX ix_question_bank_status ON question_bank (status)
+2026-07-26 21:13:27,486 INFO sqlalchemy.engine.Engine [no key 0.00035s] ()
+2026-07-26 21:13:27,493 INFO sqlalchemy.engine.Engine CREATE INDEX ix_question_bank_id ON question_bank (id)
+2026-07-26 21:13:27,493 INFO sqlalchemy.engine.Engine [no key 0.00027s] ()
+2026-07-26 21:13:27,500 INFO sqlalchemy.engine.Engine CREATE INDEX ix_question_bank_file_id ON question_bank (file_id)
+2026-07-26 21:13:27,501 INFO sqlalchemy.engine.Engine [no key 0.00021s] ()
+2026-07-26 21:13:27,508 INFO sqlalchemy.engine.Engine CREATE INDEX ix_question_bank_hash ON question_bank (hash)
+2026-07-26 21:13:27,508 INFO sqlalchemy.engine.Engine [no key 0.00027s] ()
+2026-07-26 21:13:27,513 INFO sqlalchemy.engine.Engine CREATE INDEX ix_question_bank_topic_name ON question_bank (topic_name)
+2026-07-26 21:13:27,513 INFO sqlalchemy.engine.Engine [no key 0.00021s] ()
+2026-07-26 21:13:27,520 INFO sqlalchemy.engine.Engine 
+CREATE TABLE generated_questions (
+	paper_id UUID NOT NULL, 
+	question_bank_id UUID, 
+	topic_id UUID, 
+	sub_topic_id UUID, 
+	exam_name VARCHAR(300) NOT NULL, 
+	paper_set VARCHAR(50) NOT NULL, 
+	question_number INTEGER NOT NULL, 
+	topic_name VARCHAR(300), 
+	sub_topic_name VARCHAR(300), 
+	difficulty VARCHAR(50) NOT NULL, 
+	language VARCHAR(50) NOT NULL, 
+	question_type VARCHAR(100) NOT NULL, 
+	question_text TEXT NOT NULL, 
+	option_a TEXT, 
+	option_b TEXT, 
+	option_c TEXT, 
+	option_d TEXT, 
+	correct_answer VARCHAR(10) NOT NULL, 
+	correct_answer_text TEXT, 
+	explanation TEXT, 
+	reference_source VARCHAR(500), 
+	source_page_number INTEGER, 
+	weightage FLOAT, 
+	keywords VARCHAR(500), 
+	marks INTEGER NOT NULL, 
+	section VARCHAR(200), 
+	is_verified BOOLEAN NOT NULL, 
+	validation_status VARCHAR(50) NOT NULL, 
+	validation_notes TEXT, 
+	fact_checked BOOLEAN NOT NULL, 
+	grammar_checked BOOLEAN NOT NULL, 
+	option_balance_checked BOOLEAN NOT NULL, 
+	previous_year_similarity FLOAT, 
+	hash VARCHAR(128), 
+	id UUID NOT NULL, 
+	created_at DATETIME DEFAULT (CURRENT_TIMESTAMP) NOT NULL, 
+	updated_at DATETIME DEFAULT (CURRENT_TIMESTAMP) NOT NULL, 
+	created_by VARCHAR(255), 
+	updated_by VARCHAR(255), 
+	status VARCHAR(50) NOT NULL, 
+	version INTEGER NOT NULL, 
+	is_deleted BOOLEAN NOT NULL, 
+	deleted_at DATETIME, 
+	deleted_by VARCHAR(255), 
+	notes TEXT, 
+	PRIMARY KEY (id), 
+	FOREIGN KEY(paper_id) REFERENCES generated_papers (id), 
+	FOREIGN KEY(question_bank_id) REFERENCES question_bank (id), 
+	FOREIGN KEY(topic_id) REFERENCES topics (id), 
+	FOREIGN KEY(sub_topic_id) REFERENCES sub_topics (id)
+)
+
+
+2026-07-26 21:13:27,521 INFO sqlalchemy.engine.Engine [no key 0.00033s] ()
+2026-07-26 21:13:27,528 INFO sqlalchemy.engine.Engine CREATE INDEX ix_generated_questions_paper_id ON generated_questions (paper_id)
+2026-07-26 21:13:27,528 INFO sqlalchemy.engine.Engine [no key 0.00031s] ()
+2026-07-26 21:13:27,535 INFO sqlalchemy.engine.Engine CREATE INDEX ix_generated_questions_id ON generated_questions (id)
+2026-07-26 21:13:27,536 INFO sqlalchemy.engine.Engine [no key 0.00032s] ()
+2026-07-26 21:13:27,541 INFO sqlalchemy.engine.Engine CREATE INDEX ix_generated_questions_hash ON generated_questions (hash)
+2026-07-26 21:13:27,541 INFO sqlalchemy.engine.Engine [no key 0.00020s] ()
+2026-07-26 21:13:27,548 INFO sqlalchemy.engine.Engine CREATE INDEX ix_generated_questions_topic_name ON generated_questions (topic_name)
+2026-07-26 21:13:27,549 INFO sqlalchemy.engine.Engine [no key 0.00037s] ()
+2026-07-26 21:13:27,555 INFO sqlalchemy.engine.Engine CREATE INDEX ix_generated_questions_created_by ON generated_questions (created_by)
+2026-07-26 21:13:27,555 INFO sqlalchemy.engine.Engine [no key 0.00025s] ()
+2026-07-26 21:13:27,561 INFO sqlalchemy.engine.Engine CREATE INDEX ix_generated_questions_language ON generated_questions (language)
+2026-07-26 21:13:27,562 INFO sqlalchemy.engine.Engine [no key 0.00035s] ()
+2026-07-26 21:13:27,569 INFO sqlalchemy.engine.Engine CREATE INDEX ix_generated_questions_is_deleted ON generated_questions (is_deleted)
+2026-07-26 21:13:27,569 INFO sqlalchemy.engine.Engine [no key 0.00033s] ()
+2026-07-26 21:13:27,575 INFO sqlalchemy.engine.Engine CREATE INDEX ix_generated_questions_created_at ON generated_questions (created_at)
+2026-07-26 21:13:27,575 INFO sqlalchemy.engine.Engine [no key 0.00021s] ()
+2026-07-26 21:13:27,580 INFO sqlalchemy.engine.Engine CREATE INDEX ix_generated_questions_difficulty ON generated_questions (difficulty)
+2026-07-26 21:13:27,580 INFO sqlalchemy.engine.Engine [no key 0.00024s] ()
+2026-07-26 21:13:27,585 INFO sqlalchemy.engine.Engine CREATE INDEX ix_generated_questions_status ON generated_questions (status)
+2026-07-26 21:13:27,585 INFO sqlalchemy.engine.Engine [no key 0.00031s] ()
+2026-07-26 21:13:27,591 INFO sqlalchemy.engine.Engine 
+CREATE TABLE answer_keys (
+	paper_id UUID NOT NULL, 
+	question_id UUID NOT NULL, 
+	question_number INTEGER NOT NULL, 
+	correct_option VARCHAR(10) NOT NULL, 
+	correct_answer_text TEXT, 
+	marks INTEGER NOT NULL, 
+	negative_marks VARCHAR(10), 
+	is_multi_correct BOOLEAN NOT NULL, 
+	multi_correct_options VARCHAR(50), 
+	explanation_short TEXT, 
+	explanation_detailed TEXT, 
+	reference_source VARCHAR(500), 
+	topic VARCHAR(300), 
+	difficulty VARCHAR(50), 
+	id UUID NOT NULL, 
+	created_at DATETIME DEFAULT (CURRENT_TIMESTAMP) NOT NULL, 
+	updated_at DATETIME DEFAULT (CURRENT_TIMESTAMP) NOT NULL, 
+	created_by VARCHAR(255), 
+	updated_by VARCHAR(255), 
+	status VARCHAR(50) NOT NULL, 
+	version INTEGER NOT NULL, 
+	is_deleted BOOLEAN NOT NULL, 
+	deleted_at DATETIME, 
+	deleted_by VARCHAR(255), 
+	notes TEXT, 
+	PRIMARY KEY (id), 
+	FOREIGN KEY(paper_id) REFERENCES generated_papers (id), 
+	UNIQUE (question_id), 
+	FOREIGN KEY(question_id) REFERENCES generated_questions (id)
+)
+
+
+2026-07-26 21:13:27,591 INFO sqlalchemy.engine.Engine [no key 0.00021s] ()
+2026-07-26 21:13:27,598 INFO sqlalchemy.engine.Engine CREATE INDEX ix_answer_keys_created_by ON answer_keys (created_by)
+2026-07-26 21:13:27,598 INFO sqlalchemy.engine.Engine [no key 0.00036s] ()
+2026-07-26 21:13:27,605 INFO sqlalchemy.engine.Engine CREATE INDEX ix_answer_keys_is_deleted ON answer_keys (is_deleted)
+2026-07-26 21:13:27,605 INFO sqlalchemy.engine.Engine [no key 0.00023s] ()
+2026-07-26 21:13:27,610 INFO sqlalchemy.engine.Engine CREATE INDEX ix_answer_keys_created_at ON answer_keys (created_at)
+2026-07-26 21:13:27,611 INFO sqlalchemy.engine.Engine [no key 0.00025s] ()
+2026-07-26 21:13:27,618 INFO sqlalchemy.engine.Engine CREATE INDEX ix_answer_keys_paper_id ON answer_keys (paper_id)
+2026-07-26 21:13:27,618 INFO sqlalchemy.engine.Engine [no key 0.00032s] ()
+2026-07-26 21:13:27,624 INFO sqlalchemy.engine.Engine CREATE INDEX ix_answer_keys_status ON answer_keys (status)
+2026-07-26 21:13:27,625 INFO sqlalchemy.engine.Engine [no key 0.00034s] ()
+2026-07-26 21:13:27,631 INFO sqlalchemy.engine.Engine CREATE INDEX ix_answer_keys_id ON answer_keys (id)
+2026-07-26 21:13:27,631 INFO sqlalchemy.engine.Engine [no key 0.00026s] ()
+2026-07-26 21:13:27,638 INFO sqlalchemy.engine.Engine 
+CREATE TABLE explanations (
+	question_id UUID NOT NULL, 
+	short_explanation TEXT NOT NULL, 
+	detailed_explanation TEXT, 
+	reference_source VARCHAR(500), 
+	source_page INTEGER, 
+	verified_facts_json TEXT, 
+	fact_check_notes TEXT, 
+	language VARCHAR(50), 
+	is_verified BOOLEAN NOT NULL, 
+	id UUID NOT NULL, 
+	created_at DATETIME DEFAULT (CURRENT_TIMESTAMP) NOT NULL, 
+	updated_at DATETIME DEFAULT (CURRENT_TIMESTAMP) NOT NULL, 
+	created_by VARCHAR(255), 
+	updated_by VARCHAR(255), 
+	status VARCHAR(50) NOT NULL, 
+	version INTEGER NOT NULL, 
+	is_deleted BOOLEAN NOT NULL, 
+	deleted_at DATETIME, 
+	deleted_by VARCHAR(255), 
+	notes TEXT, 
+	PRIMARY KEY (id), 
+	FOREIGN KEY(question_id) REFERENCES generated_questions (id)
+)
+
+
+2026-07-26 21:13:27,639 INFO sqlalchemy.engine.Engine [no key 0.00038s] ()
+2026-07-26 21:13:27,647 INFO sqlalchemy.engine.Engine CREATE INDEX ix_explanations_created_by ON explanations (created_by)
+2026-07-26 21:13:27,647 INFO sqlalchemy.engine.Engine [no key 0.00029s] ()
+2026-07-26 21:13:27,653 INFO sqlalchemy.engine.Engine CREATE INDEX ix_explanations_question_id ON explanations (question_id)
+2026-07-26 21:13:27,653 INFO sqlalchemy.engine.Engine [no key 0.00023s] ()
+2026-07-26 21:13:27,659 INFO sqlalchemy.engine.Engine CREATE INDEX ix_explanations_is_deleted ON explanations (is_deleted)
+2026-07-26 21:13:27,659 INFO sqlalchemy.engine.Engine [no key 0.00022s] ()
+2026-07-26 21:13:27,666 INFO sqlalchemy.engine.Engine CREATE INDEX ix_explanations_created_at ON explanations (created_at)
+2026-07-26 21:13:27,666 INFO sqlalchemy.engine.Engine [no key 0.00027s] ()
+2026-07-26 21:13:27,673 INFO sqlalchemy.engine.Engine CREATE INDEX ix_explanations_status ON explanations (status)
+2026-07-26 21:13:27,673 INFO sqlalchemy.engine.Engine [no key 0.00020s] ()
+2026-07-26 21:13:27,680 INFO sqlalchemy.engine.Engine CREATE INDEX ix_explanations_id ON explanations (id)
+2026-07-26 21:13:27,681 INFO sqlalchemy.engine.Engine [no key 0.00029s] ()
+2026-07-26 21:13:27,687 INFO sqlalchemy.engine.Engine COMMIT

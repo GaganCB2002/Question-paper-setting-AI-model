@@ -1,0 +1,7 @@
+INFO:     Started server process [21712]
+INFO:     Waiting for application startup.
+21:13:26 | INFO | app.main:lifespan:21 - Starting KKE Question Paper Generator v1.0.0
+21:13:26 | INFO | app.main:lifespan:22 - Environment: development, Debug: True
+21:13:27 | INFO | app.main:lifespan:26 - Database tables ready
+INFO:     Application startup complete.
+INFO:     Uvicorn running on http://127.0.0.1:9878 (Press CTRL+C to quit)
