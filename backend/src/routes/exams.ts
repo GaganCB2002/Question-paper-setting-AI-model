@@ -22,12 +22,13 @@ router.get('/', async (req: Request, res: Response) => {
  */
 router.get('/:id', async (req: Request, res: Response) => {
   try {
-    const exam = await db.getExam(req.params.id);
+    const id = req.params.id as string;
+    const exam = await db.getExam(id);
     if (!exam) {
       return res.status(404).json({ success: false, error: 'Exam not found' });
     }
 
-    const papers = await db.listPapers(req.params.id);
+    const papers = await db.listPapers(id);
     res.json({ success: true, data: { ...exam, papers } });
   } catch (err: any) {
     res.status(500).json({ success: false, error: err.message });
@@ -39,7 +40,7 @@ router.get('/:id', async (req: Request, res: Response) => {
  */
 router.delete('/:id', async (req: Request, res: Response) => {
   try {
-    await db.deleteExam(req.params.id);
+    await db.deleteExam(req.params.id as string);
     res.json({ success: true });
   } catch (err: any) {
     res.status(500).json({ success: false, error: err.message });

@@ -24,12 +24,13 @@ router.get('/', async (req: Request, res: Response) => {
  */
 router.get('/:id', async (req: Request, res: Response) => {
   try {
-    const paper = await db.getPaper(req.params.id);
+    const id = req.params.id as string;
+    const paper = await db.getPaper(id);
     if (!paper) {
       return res.status(404).json({ success: false, error: 'Paper not found' });
     }
 
-    const questions = await db.getQuestionsByPaper(req.params.id);
+    const questions = await db.getQuestionsByPaper(id);
     res.json({ success: true, data: { ...paper, questions } });
   } catch (err: any) {
     res.status(500).json({ success: false, error: err.message });
@@ -41,7 +42,7 @@ router.get('/:id', async (req: Request, res: Response) => {
  */
 router.delete('/:id', async (req: Request, res: Response) => {
   try {
-    await db.deletePaper(req.params.id);
+    await db.deletePaper(req.params.id as string);
     res.json({ success: true });
   } catch (err: any) {
     res.status(500).json({ success: false, error: err.message });
@@ -54,19 +55,21 @@ router.delete('/:id', async (req: Request, res: Response) => {
  */
 router.get('/:id/export/pdf', async (req: Request, res: Response) => {
   try {
-    const paper: any = await db.getPaper(req.params.id);
+    const id = req.params.id as string;
+    const paper: any = await db.getPaper(id);
     if (!paper) {
       return res.status(404).json({ success: false, error: 'Paper not found' });
     }
 
-    const questions = await db.getQuestionsByPaper(req.params.id);
+    const questions = await db.getQuestionsByPaper(id);
     const exam: any = await db.getExam(paper.examId);
     const includeAnswers = req.query.answers === 'true';
 
+    const validQuestions: any[] = (questions || []).filter((q: any) => q != null);
     const pdfBuffer = await exportToPDF(
       exam?.name || 'Exam Paper',
       paper.setName || `SET ${paper.setNumber}`,
-      questions,
+      validQuestions as any,
       includeAnswers
     );
 
@@ -84,19 +87,21 @@ router.get('/:id/export/pdf', async (req: Request, res: Response) => {
  */
 router.get('/:id/export/docx', async (req: Request, res: Response) => {
   try {
-    const paper: any = await db.getPaper(req.params.id);
+    const id = req.params.id as string;
+    const paper: any = await db.getPaper(id);
     if (!paper) {
       return res.status(404).json({ success: false, error: 'Paper not found' });
     }
 
-    const questions = await db.getQuestionsByPaper(req.params.id);
+    const questions = await db.getQuestionsByPaper(id);
     const exam: any = await db.getExam(paper.examId);
     const includeAnswers = req.query.answers === 'true';
 
+    const validQuestions: any[] = (questions || []).filter((q: any) => q != null);
     const docxBuffer = await exportToDOCX(
       exam?.name || 'Exam Paper',
       paper.setName || `SET ${paper.setNumber}`,
-      questions,
+      validQuestions as any,
       includeAnswers
     );
 

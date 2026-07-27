@@ -9,7 +9,9 @@ const router = Router();
  * POST /api/upload
  * Upload one or more documents for text extraction.
  */
-router.post('/', upload.array('files', 5), async (req: Request, res: Response) => {
+const MAX_FILES = parseInt(process.env.MAX_FILES || '5');
+
+router.post('/', upload.array('files', MAX_FILES), async (req: Request, res: Response) => {
   try {
     const files = req.files as Express.Multer.File[];
 

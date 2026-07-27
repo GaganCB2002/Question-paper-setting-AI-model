@@ -1,6 +1,7 @@
 import type { Question } from '../../../shared/types.js';
+import { createRequire } from 'module';
 
-// We use dynamic imports because pdfmake and docx have complex initialization
+const require = createRequire(import.meta.url);
 
 /**
  * Export questions as a formatted PDF document.
@@ -11,14 +12,6 @@ export async function exportToPDF(
   questions: Question[],
   includeAnswers: boolean = false
 ): Promise<Buffer> {
-  const PdfPrinter = (await import('pdfmake')).default;
-
-  const fonts = {
-    Roboto: {
-      normal: 'node_modules/pdfmake/build/vfs_fonts.js',
-    },
-  };
-
   // Build document definition
   const content: any[] = [
     { text: examName, style: 'header', alignment: 'center' },
@@ -99,7 +92,6 @@ export async function exportToPDF(
   // Generate PDF buffer
   return new Promise((resolve, reject) => {
     try {
-      // Use pdfmake's createPdf for virtual file system approach
       const pdfmake = require('pdfmake/build/pdfmake');
       const vfsFonts = require('pdfmake/build/vfs_fonts');
       pdfmake.vfs = vfsFonts.pdfMake?.vfs || vfsFonts.vfs;

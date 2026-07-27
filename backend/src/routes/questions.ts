@@ -54,7 +54,7 @@ router.get('/topics', async (req: Request, res: Response) => {
  */
 router.get('/paper/:paperId', async (req: Request, res: Response) => {
   try {
-    const questions = await db.getQuestionsByPaper(req.params.paperId);
+    const questions = await db.getQuestionsByPaper(req.params.paperId as string);
     res.json({ success: true, data: questions });
   } catch (err: any) {
     res.status(500).json({ success: false, error: err.message });
