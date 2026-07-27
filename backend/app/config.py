@@ -19,7 +19,9 @@ class Settings(BaseSettings):
     DATABASE_URL_SYNC: str = "postgresql+psycopg2://postgres:postgres@localhost:5432/kke_qp_generator"
     SUPABASE_URL: Optional[str] = None
     SUPABASE_KEY: Optional[str] = None
+    SUPABASE_SERVICE_KEY: Optional[str] = None
     SUPABASE_DB_URL: Optional[str] = None
+    SUPABASE_JWKS_URL: Optional[str] = None
 
     REDIS_URL: str = "redis://localhost:6379/0"
 
