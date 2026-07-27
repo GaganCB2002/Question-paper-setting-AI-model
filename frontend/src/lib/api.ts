@@ -22,37 +22,41 @@ async function request<T = any>(
   path: string,
   options: RequestInit = {}
 ): Promise<{ success: boolean; data?: T; error?: string }> {
-  const token = useAuthStore.getState().accessToken;
-  const headers: Record<string, string> = {
-    ...(options.headers as Record<string, string>),
-  };
-  if (token) headers['Authorization'] = `Bearer ${token}`;
-  if (!(options.body instanceof FormData)) {
-    headers['Content-Type'] = 'application/json';
-  }
-
-  let res = await fetch(`${API_BASE}${path}`, { ...options, headers });
-
-  if (res.status === 401 && token) {
-    const newToken = await refreshAccessToken();
-    if (newToken) {
-      headers['Authorization'] = `Bearer ${newToken}`;
-      res = await fetch(`${API_BASE}${path}`, { ...options, headers });
+  try {
+    const token = useAuthStore.getState().accessToken;
+    const headers: Record<string, string> = {
+      ...(options.headers as Record<string, string>),
+    };
+    if (token) headers['Authorization'] = `Bearer ${token}`;
+    if (!(options.body instanceof FormData)) {
+      headers['Content-Type'] = 'application/json';
     }
-  }
 
-  if (!res.ok) {
-    try {
-      const err = await res.json();
-      return { success: false, error: err.detail || err.message || `Error ${res.status}` };
-    } catch {
-      return { success: false, error: `HTTP ${res.status}` };
+    let res = await fetch(`${API_BASE}${path}`, { ...options, headers });
+
+    if (res.status === 401 && token) {
+      const newToken = await refreshAccessToken();
+      if (newToken) {
+        headers['Authorization'] = `Bearer ${newToken}`;
+        res = await fetch(`${API_BASE}${path}`, { ...options, headers });
+      }
     }
-  }
 
-  if (res.status === 204) return { success: true };
-  const data = await res.json();
-  return { success: true, data };
+    if (!res.ok) {
+      try {
+        const err = await res.json();
+        return { success: false, error: err.detail || err.message || `Error ${res.status}` };
+      } catch {
+        return { success: false, error: `HTTP ${res.status}` };
+      }
+    }
+
+    if (res.status === 204) return { success: true };
+    const data = await res.json();
+    return { success: true, data };
+  } catch (err: any) {
+    return { success: false, error: err.message || 'Network error' };
+  }
 }
 
 export const api = {

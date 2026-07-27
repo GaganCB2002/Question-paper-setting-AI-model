@@ -1,5 +1,5 @@
 import { useState, useEffect } from 'react';
-import { Upload as UploadIcon, FileText, Folder, Loader2, CheckCircle, AlertCircle, ChevronRight, Plus, X } from 'lucide-react';
+import { Upload as UploadIcon, FileText, Folder, Loader2, CheckCircle, AlertCircle, ChevronRight, Plus, X, Eye, ServerCrash } from 'lucide-react';
 import { Button } from '../components/ui/button';
 import { Card, CardContent, CardHeader, CardTitle } from '../components/ui/card';
 import { Input } from '../components/ui/input';
@@ -11,7 +11,7 @@ import { useNavigate } from 'react-router-dom';
 export default function UploadPage() {
   const { toast } = useToast();
   const navigate = useNavigate();
-  const { folders, fetchFolders, createFolder } = useFolderStore();
+  const { folders, fetchFolders } = useFolderStore();
 
   const [files, setFiles] = useState<File[]>([]);
   const [uploading, setUploading] = useState(false);
@@ -19,8 +19,13 @@ export default function UploadPage() {
   const [selectedFolderId, setSelectedFolderId] = useState<string | undefined>(undefined);
   const [showNewFolder, setShowNewFolder] = useState(false);
   const [newFolderName, setNewFolderName] = useState('');
+  const [creatingFolder, setCreatingFolder] = useState(false);
+  const [backendOk, setBackendOk] = useState<boolean | null>(null);
 
-  useEffect(() => { fetchFolders(); }, []);
+  useEffect(() => {
+    api.health().then(() => setBackendOk(true)).catch(() => setBackendOk(false));
+    fetchFolders();
+  }, []);
 
   const handleFileChange = (e: React.ChangeEvent<HTMLInputElement>) => {
     if (e.target.files) setFiles(Array.from(e.target.files));
@@ -33,14 +38,23 @@ export default function UploadPage() {
 
   const createNewFolderAndUpload = async () => {
     if (!newFolderName.trim()) return;
-    const folderRes = await api.createFolder({ name: newFolderName.trim() });
-    if (folderRes.success && folderRes.data) {
-      setSelectedFolderId(folderRes.data.id);
-      setShowNewFolder(false);
-      setNewFolderName('');
-      await fetchFolders();
-      toast({ title: 'Folder created', description: `"${newFolderName.trim()}" created.` });
+    setCreatingFolder(true);
+    try {
+      const res = await api.createFolder({ name: newFolderName.trim() });
+      if (res.success && res.data) {
+        setSelectedFolderId(res.data.id);
+        setShowNewFolder(false);
+        setNewFolderName('');
+        await fetchFolders();
+        toast({ title: 'Folder created', description: `"${newFolderName.trim()}" created.` });
+      } else {
+        const msg = res.error || 'Could not create folder';
+        toast({ title: 'Create failed', description: msg, variant: 'destructive' });
+      }
+    } catch (err: any) {
+      toast({ title: 'Network error', description: err.message || 'Backend may be offline.', variant: 'destructive' });
     }
+    setCreatingFolder(false);
   };
 
   const startUpload = async () => {
@@ -52,13 +66,14 @@ export default function UploadPage() {
     for (const file of files) {
       try {
         const res = await api.uploadFile(file, selectedFolderId);
-        if (res.success) {
-          newResults.push({ name: file.name, status: 'success', data: res.data });
-        } else {
-          newResults.push({ name: file.name, status: 'error', error: res.error });
-        }
+        newResults.push({
+          name: file.name,
+          status: res.success ? 'success' : 'error',
+          data: res.data,
+          error: res.error,
+        });
       } catch (err: any) {
-        newResults.push({ name: file.name, status: 'error', error: err.message });
+        newResults.push({ name: file.name, status: 'error', error: err.message || 'Upload failed' });
       }
     }
 
@@ -66,12 +81,44 @@ export default function UploadPage() {
     setUploading(false);
     const successCount = newResults.filter(r => r.status === 'success').length;
     toast({
-      title: 'Upload Complete',
-      description: `${successCount} of ${files.length} files uploaded successfully.`,
+      title: successCount === files.length ? 'Upload Complete' : 'Upload Partial',
+      description: `${successCount} of ${files.length} files uploaded.`,
+      variant: successCount === files.length ? 'default' : 'destructive',
     });
   };
 
   const selectedFolder = folders.find(f => f.id === selectedFolderId);
+
+  if (backendOk === false) {
+    return (
+      <div className="max-w-4xl mx-auto p-8">
+        <Card className="border-destructive/50">
+          <CardContent className="p-12 text-center space-y-4">
+            <ServerCrash className="w-16 h-16 mx-auto text-destructive/50" />
+            <h2 className="text-xl font-bold">Backend Unreachable</h2>
+            <p className="text-muted-foreground text-sm max-w-md mx-auto">
+              Cannot connect to the API server at <code className="text-xs bg-muted px-1.5 py-0.5 rounded">http://localhost:8000</code>.
+              Make sure the backend is running.
+            </p>
+            <Button variant="outline" onClick={() => { setBackendOk(null); api.health().then(() => setBackendOk(true)).catch(() => setBackendOk(false)); }}>
+              Retry Connection
+            </Button>
+          </CardContent>
+        </Card>
+      </div>
+    );
+  }
+
+  if (backendOk === null) {
+    return (
+      <div className="max-w-4xl mx-auto p-8 flex items-center justify-center min-h-[60vh]">
+        <div className="text-center space-y-3">
+          <Loader2 className="w-8 h-8 animate-spin mx-auto text-muted-foreground" />
+          <p className="text-sm text-muted-foreground">Connecting to server...</p>
+        </div>
+      </div>
+    );
+  }
 
   return (
     <div className="max-w-4xl mx-auto p-8 space-y-8">
@@ -115,7 +162,10 @@ export default function UploadPage() {
               <Input placeholder="Folder name" value={newFolderName} onChange={e => setNewFolderName(e.target.value)}
                 onKeyDown={e => { if (e.key === 'Enter') createNewFolderAndUpload(); if (e.key === 'Escape') setShowNewFolder(false); }}
                 className="max-w-xs h-9" autoFocus />
-              <Button size="sm" onClick={createNewFolderAndUpload} disabled={!newFolderName.trim()}>Create</Button>
+              <Button size="sm" onClick={createNewFolderAndUpload} disabled={!newFolderName.trim() || creatingFolder}>
+                {creatingFolder ? <Loader2 className="w-4 h-4 animate-spin mr-1" /> : null}
+                Create
+              </Button>
               <Button size="sm" variant="ghost" onClick={() => setShowNewFolder(false)}><X className="w-4 h-4" /></Button>
             </div>
           )}
@@ -176,7 +226,7 @@ export default function UploadPage() {
                 <div className="text-sm text-muted-foreground">
                   {selectedFolder ? `Saving to: ${selectedFolder.name}` : 'Saving to: Root'}
                 </div>
-                <Button size="lg" onClick={startUpload} disabled={uploading}>
+                <Button size="lg" onClick={startUpload} disabled={uploading || files.length === 0}>
                   {uploading ? <><Loader2 className="w-4 h-4 animate-spin mr-2" /> Uploading...</> : 'Upload Files'}
                 </Button>
               </div>
@@ -195,13 +245,21 @@ export default function UploadPage() {
             {results.map((r, i) => (
               <div key={i} className={`flex items-center gap-3 p-3 rounded-md border ${r.status === 'success' ? 'bg-green-500/5 border-green-500/20' : 'bg-destructive/10 border-destructive/20'}`}>
                 {r.status === 'success' ? <CheckCircle className="w-5 h-5 text-green-500" /> : <AlertCircle className="w-5 h-5 text-destructive" />}
-                <span className="flex-1 text-sm">{r.name}</span>
-                <span className="text-xs text-muted-foreground">{r.status === 'success' ? 'Uploaded' : r.error}</span>
+                <span className="flex-1 text-sm truncate">{r.name}</span>
+                <span className="text-xs text-muted-foreground shrink-0">{r.status === 'success' ? 'Uploaded' : (r.error || 'Error')}</span>
                 {r.status === 'success' && (
-                  <Button variant="ghost" size="sm" className="h-7 text-xs"
-                    onClick={() => selectedFolderId && navigate(`/folders/${selectedFolderId}`)}>
-                    View <ChevronRight className="w-3 h-3 ml-1" />
-                  </Button>
+                  <div className="flex gap-1 shrink-0">
+                    {r.name?.toLowerCase().endsWith('.pdf') && (
+                      <Button variant="ghost" size="sm" className="h-7 text-xs"
+                        onClick={() => navigate(`/pdf-viewer/${r.data?.id}`)}>
+                        <Eye className="w-3 h-3 mr-1" /> View
+                      </Button>
+                    )}
+                    <Button variant="ghost" size="sm" className="h-7 text-xs"
+                      onClick={() => selectedFolderId ? navigate(`/folders/${selectedFolderId}`) : navigate('/')}>
+                      Folder <ChevronRight className="w-3 h-3 ml-1" />
+                    </Button>
+                  </div>
                 )}
               </div>
             ))}

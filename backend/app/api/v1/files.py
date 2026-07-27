@@ -195,6 +195,25 @@ async def get_file(
     )
 
 
+@router.get("/{file_id}/download")
+async def download_file(
+    file_id: uuid.UUID,
+    current_user: User = Depends(get_current_user),
+    db: AsyncSession = Depends(get_db),
+):
+    service = FileService(db)
+    file = await service.get_file(file_id)
+    if file is None:
+        raise HTTPException(status_code=status.HTTP_404_NOT_FOUND, detail="File not found")
+    content = await service.get_file_content(file)
+    from fastapi.responses import Response
+    return Response(
+        content=content,
+        media_type=file.mime_type or "application/octet-stream",
+        headers={"Content-Disposition": f'inline; filename="{file.original_filename}"'},
+    )
+
+
 @router.delete("/{file_id}")
 async def delete_file(
     file_id: uuid.UUID,

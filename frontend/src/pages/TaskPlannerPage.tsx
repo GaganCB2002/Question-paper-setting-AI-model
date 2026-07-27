@@ -43,6 +43,7 @@ interface SSEEvent {
   task_id?: string;
   total_generated?: number;
   total_planned?: number;
+  generated?: number;
 }
 
 export default function TaskPlannerPage() {

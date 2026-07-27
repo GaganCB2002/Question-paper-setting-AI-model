@@ -1,6 +1,6 @@
 import { useEffect, useState } from 'react';
 import { useParams, useNavigate, Link } from 'react-router-dom';
-import { ArrowLeft, Folder, FileText, Upload, Trash2, Pencil, Loader2, FolderPlus, CheckCircle } from 'lucide-react';
+import { ArrowLeft, Folder, FileText, Upload, Trash2, Pencil, Loader2, FolderPlus, CheckCircle, Eye } from 'lucide-react';
 import { Button } from '../components/ui/button';
 import { Card, CardContent } from '../components/ui/card';
 import { Input } from '../components/ui/input';
@@ -226,7 +226,8 @@ export default function FolderViewPage() {
         ) : (
           <div className="space-y-2">
             {files.map(f => (
-              <Card key={f.id} className="hover:border-primary/30 transition-all">
+              <Card key={f.id} className={`hover:border-primary/30 transition-all ${f.extension === 'pdf' ? 'cursor-pointer' : ''}`}
+                onClick={() => { if (f.extension === 'pdf') navigate(`/pdf-viewer/${f.id}`); }}>
                 <CardContent className="p-4 flex items-center gap-4">
                   <div className="w-10 h-10 rounded-lg bg-primary/10 flex items-center justify-center shrink-0">
                     <FileText className="w-5 h-5 text-primary" />
@@ -240,6 +241,12 @@ export default function FolderViewPage() {
                     </div>
                   </div>
                   <Badge variant="outline" className="text-xs">{f.extension?.toUpperCase() || 'FILE'}</Badge>
+                  {f.extension === 'pdf' && (
+                    <Button variant="ghost" size="icon" className="h-8 w-8 shrink-0"
+                      onClick={(e) => { e.stopPropagation(); navigate(`/pdf-viewer/${f.id}`); }}>
+                      <Eye className="w-4 h-4" />
+                    </Button>
+                  )}
                 </CardContent>
               </Card>
             ))}
