@@ -83,21 +83,8 @@ export default function PaperViewPage() {
   useEffect(() => {
     if (!examId || !displayExam) return;
 
-    // Check if paper already exists
-    const existingPaper = displayExam?.papers?.find((p: any) => p.setNumber === setNum);
-    
-    if (existingPaper && existingPaper.id) {
-      setStatus('complete');
-      setPaper(existingPaper);
-      api.getPaper(existingPaper.id).then(res => {
-        if (res.success && res.data.questions) {
-          setQuestions(res.data.questions);
-        }
-      });
-    } else {
-      // Start generating
-      startStream({ exam_name: examId, paper_set: `set_${setNum}`, question_count: 50, language: 'english', difficulty: 'balanced' });
-    }
+    const examName = displayExam?.exam_name || displayExam?.name || examId;
+    startStream({ exam_name: examName, paper_set: `set_${setNum}`, question_count: 50, language: 'english', difficulty: 'balanced' });
   }, [examId, setNum, displayExam]);
 
   // Auto-scroll during streaming

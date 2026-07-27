@@ -4,7 +4,7 @@ import { buildAnalysisPrompt } from '../prompts/analysisPrompt.js';
 import { buildBlueprintPrompt } from '../prompts/blueprintPrompt.js';
 import { buildPaperPrompt } from '../prompts/paperPrompt.js';
 import { buildExplanationPrompt, buildTrapAnalysisPrompt } from '../prompts/explanationPrompt.js';
-import type { ExamAnalysis, SetProfile } from '../../../shared/types.js';
+import type { ExamAnalysis, SetProfile } from '../shared/types.js';
 
 let genAI: GoogleGenerativeAI;
 let model: GenerativeModel;

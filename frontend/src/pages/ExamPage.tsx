@@ -146,29 +146,17 @@ export default function ExamPage() {
           <div className="grid gap-4">
             {[1, 2, 3, 4, 5, 6].map(num => {
               const profile = SET_PROFILES[num];
-              const existingPaper = displayExam.papers?.find((p: any) => p.setNumber === num);
-              
               return (
-                <Card key={num} className={`border transition-colors ${existingPaper ? 'border-green-500/50 bg-green-500/5' : 'hover:border-primary/50'}`}>
+                <Card key={num} className="border hover:border-primary/50 transition-colors">
                   <CardHeader className="p-4 pb-2">
                     <div className="flex justify-between items-start">
                       <CardTitle className="text-base">{profile?.name || `Set ${num}`}</CardTitle>
-                      {existingPaper && <CheckCircle className="w-4 h-4 text-green-500" />}
                     </div>
                     <CardDescription className="text-xs">{profile?.description || ''}</CardDescription>
                   </CardHeader>
                   <CardFooter className="p-4 pt-2 flex justify-between items-center">
-                    {existingPaper ? (
-                      <>
-                        <Badge variant="outline" className="bg-background">Generated</Badge>
-                        <Button size="sm" variant="secondary" onClick={() => generatePaper(num)}>View Paper</Button>
-                      </>
-                    ) : (
-                      <>
-                        <Badge variant="secondary" className="bg-secondary/50">Not Started</Badge>
-                        <Button size="sm" onClick={() => generatePaper(num)}>Generate</Button>
-                      </>
-                    )}
+                    <Badge variant="secondary" className="bg-secondary/50">Not Started</Badge>
+                    <Button size="sm" onClick={() => generatePaper(num)}>Generate</Button>
                   </CardFooter>
                 </Card>
               );

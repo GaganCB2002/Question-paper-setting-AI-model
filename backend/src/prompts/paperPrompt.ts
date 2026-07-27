@@ -1,4 +1,4 @@
-import type { SetProfile } from '../../../shared/types.js';
+import type { SetProfile } from '../shared/types.js';
 
 /**
  * Paper Generation Prompt — Creates question papers per set profile

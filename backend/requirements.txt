@@ -15,8 +15,8 @@ passlib[bcrypt]==1.7.4
 python-jose[cryptography]==3.3.0
 python-jose==3.3.0
 bcrypt==4.2.1
-pydantic[email]==2.10.3
-pydantic-settings==2.7.0
+pydantic[email]>=2.10.3,<3
+pydantic-settings>=2.7.0,<3
 email-validator==2.2.0
 
 # AI & OCR

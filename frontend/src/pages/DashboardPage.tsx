@@ -63,8 +63,8 @@ export default function DashboardPage() {
   useEffect(() => {
     fetchFolders();
     fetchTree();
-    api.getDashboard().then(r => {
-      if (r.success && r.data?.stats) setStats(r.data.stats);
+    api.getQuota().then(r => {
+      if (r.success) setStats(prev => ({ ...prev, questions: r.data.daily_used }));
     }).catch(() => {});
   }, []);
 

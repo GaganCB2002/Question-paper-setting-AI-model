@@ -184,17 +184,23 @@ KKE_QUESTION_PAPER_GENERATOR/
 │
 ├── .gitignore
 ├── package.json                    # Root orchestrator (concurrently)
+├── README.md                       # Project documentation
 ├── run_project.bat                 # One-click Windows runner
 ├── run_project.ps1                 # One-click PowerShell runner
 ├── run_project.py                  # One-click Python runner
 ├── run_project.sh                  # One-click Linux/Mac runner
+│
+├── database/                       # === DATABASE MIGRATIONS & SCHEMA ===
+│   ├── alembic.ini                 # Alembic configuration
+│   ├── alembic/                    # Migration scripts
+│   ├── migrate_db.py               # SQLite migration utility
+│   └── schema.sql                  # Supabase/PostgreSQL schema
 │
 ├── backend/
 │   ├── .env / .env.example
 │   ├── requirements.txt
 │   ├── docker-compose.yml
 │   ├── Dockerfile
-│   ├── alembic.ini / alembic/      # DB migrations
 │   ├── data/                        # SQLite runtime DB
 │   ├── logs/                        # Log files
 │   ├── uploads/                     # User file uploads
@@ -258,6 +264,8 @@ KKE_QUESTION_PAPER_GENERATOR/
 │   │
 │   └── src/                         # === EXPRESS.JS SECONDARY BACKEND ===
 │       ├── index.ts                 # Express app (:3001)
+│       ├── shared/                  # Shared TypeScript types
+│       │   └── types.ts
 │       ├── routes/
 │       │   ├── exams.ts             # Exam CRUD
 │       │   ├── upload.ts            # File upload (Multer)
@@ -281,8 +289,7 @@ KKE_QUESTION_PAPER_GENERATOR/
 │       │   └── explanationPrompt.ts # Explanation + trap analysis prompt
 │       └── db/
 │           ├── index.ts             # Unified DB dispatch
-│           ├── sqlite.ts            # better-sqlite3 implementation
-│           └── schema.sql           # SQLite schema
+│           └── sqlite.ts            # better-sqlite3 implementation
 │
 ├── frontend/                        # === REACT + VITE + TYPESCRIPT SPA ===
 │   ├── index.html
@@ -331,8 +338,6 @@ KKE_QUESTION_PAPER_GENERATOR/
 │       │   └── utils.ts             # cn() helper (tailwind-merge + clsx)
 │       │
 │       └── assets/
-│
-└── shared/                          # (placeholder for shared types)
 ```
 
 ---

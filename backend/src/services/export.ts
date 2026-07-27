@@ -1,4 +1,4 @@
-import type { Question } from '../../../shared/types.js';
+import type { Question } from '../shared/types.js';
 import { createRequire } from 'module';
 
 const require = createRequire(import.meta.url);

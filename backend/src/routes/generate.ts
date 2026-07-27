@@ -1,8 +1,8 @@
 import { Router, type Request, type Response } from 'express';
 import { streamGeneratePaper, generatePaper, generateExplanations, generateTrapAnalysis } from '../services/gemini.js';
 import * as db from '../db/index.js';
-import { SET_PROFILES } from '../../../shared/types.js';
-import type { SetProfile } from '../../../shared/types.js';
+import { SET_PROFILES } from '../shared/types.js';
+import type { SetProfile } from '../shared/types.js';
 
 const router = Router();
 
