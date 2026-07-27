@@ -13,7 +13,6 @@ psycopg2-binary==2.9.10
 # Auth & Security
 passlib[bcrypt]==1.7.4
 python-jose[cryptography]==3.3.0
-python-jose==3.3.0
 bcrypt==4.2.1
 pydantic[email]>=2.10.3,<3
 pydantic-settings>=2.7.0,<3
@@ -40,7 +39,6 @@ filetype==1.2.0
 # Utility
 python-dotenv==1.0.1
 uuid7==0.1.0
-orjson==3.10.12
 celery[redis]==5.4.0
 redis==5.2.1
 langdetect==1.0.9
