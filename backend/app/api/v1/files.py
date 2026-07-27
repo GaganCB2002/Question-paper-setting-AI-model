@@ -58,7 +58,13 @@ async def upload_file(
             user_id=current_user.id,
             folder_id=folder_id,
         )
-        return FileUploadResponse(
+    except ValueError as e:
+        raise HTTPException(status_code=status.HTTP_400_BAD_REQUEST, detail=str(e))
+
+    from scripts.migrate_db import run_all_migrations
+    await run_all_migrations(db)
+
+    return FileUploadResponse(
             id=uploaded.id,
             original_filename=uploaded.original_filename,
             stored_filename=uploaded.stored_filename,
@@ -72,8 +78,6 @@ async def upload_file(
             ocr_processed=uploaded.ocr_processed,
             created_at=uploaded.created_at,
         )
-    except ValueError as e:
-        raise HTTPException(status_code=status.HTTP_400_BAD_REQUEST, detail=str(e))
 
 
 @router.post("/process/{file_id}", response_model=FileProcessResponse)

@@ -172,6 +172,9 @@ async def init_db():
         await conn.run_sync(Base.metadata.create_all)
     logger.info("All tables created successfully.")
     await seed_test_user()
+    from scripts.migrate_db import run_all_migrations
+    async with async_session_factory() as session:
+        await run_all_migrations(session)
 
 
 async def close_db():
