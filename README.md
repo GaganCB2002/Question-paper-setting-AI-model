@@ -185,10 +185,6 @@ KKE_QUESTION_PAPER_GENERATOR/
 ├── .gitignore
 ├── package.json                    # Root orchestrator (concurrently)
 ├── README.md                       # Project documentation
-├── run_project.bat                 # One-click Windows runner
-├── run_project.ps1                 # One-click PowerShell runner
-├── run_project.py                  # One-click Python runner
-├── run_project.sh                  # One-click Linux/Mac runner
 │
 ├── database/                       # === DATABASE MIGRATIONS & SCHEMA ===
 │   ├── alembic.ini                 # Alembic configuration
@@ -199,10 +195,13 @@ KKE_QUESTION_PAPER_GENERATOR/
 ├── backend/
 │   ├── .env / .env.example
 │   ├── requirements.txt
+│   ├── runtime.txt                  # Python version (Render)
+│   ├── Procfile                     # Render start command
 │   ├── docker-compose.yml
 │   ├── Dockerfile
 │   ├── data/                        # SQLite runtime DB
 │   ├── logs/                        # Log files
+│   ├── scripts/                     # Launcher scripts & DB init
 │   ├── uploads/                     # User file uploads
 │   │
 │   ├── app/                         # === PYTHON FASTAPI BACKEND ===
